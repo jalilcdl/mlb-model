@@ -1,0 +1,69 @@
+{
+  "n_games": 3524,
+  "league_hfa_mean": 0.9972870104755548,
+  "baseline": {
+    "accuracy": 0.5428490351872872,
+    "brier": 0.25370376258496163,
+    "logloss": 0.7035515951489033
+  },
+  "A_team_splits": {
+    "accuracy": 0.5499432463110102,
+    "brier": 0.25388247981624557,
+    "logloss": 0.7037463264490242,
+    "brier_improvement": {
+      "mean": -0.00017871723128387625,
+      "ci95": [
+        -0.0014331698865594543,
+        0.0011314353945663712
+      ],
+      "significant": false
+    },
+    "mean_abs_prob_shift_pts": 3.09061046784588,
+    "max_abs_prob_shift_pts": 15.251402491963011
+  },
+  "A_team_splits_park_adj": {
+    "accuracy": 0.5465380249716232,
+    "brier": 0.2536905991620128,
+    "logloss": 0.7035064149462005,
+    "brier_improvement": {
+      "mean": 1.316342294886572e-05,
+      "ci95": [
+        -0.0012035386759354952,
+        0.0012709564963292687
+      ],
+      "significant": false
+    },
+    "mean_abs_prob_shift_pts": 3.042261751133472,
+    "max_abs_prob_shift_pts": 14.061326172899847
+  },
+  "B_league_hfa": {
+    "accuracy": 0.5408626560726447,
+    "brier": 0.2538237758641164,
+    "logloss": 0.7038321417559288,
+    "brier_improvement": {
+      "mean": -0.0001200132791547719,
+      "ci95": [
+        -0.00020764879827197096,
+        -3.528868250245577e-05
+      ],
+      "significant": true
+    },
+    "mean_abs_prob_shift_pts": 0.17905245589695332,
+    "max_abs_prob_shift_pts": 1.018120371650444
+  },
+  "AB_both": {
+    "accuracy": 0.5496594778660613,
+    "brier": 0.2540057072099928,
+    "logloss": 0.7040333040780151,
+    "brier_improvement": {
+      "mean": -0.00030194462503114995,
+      "ci95": [
+        -0.0015529983432708632,
+        0.0009507386669992154
+      ],
+      "significant": false
+    },
+    "mean_abs_prob_shift_pts": 3.1086450260411262,
+    "max_abs_prob_shift_pts": 15.019902107202443
+  }
+}

@@ -1,0 +1,11 @@
+# Dark theme, committed so the dashboard is dark by default for every viewer
+# (not dependent on each person's browser/app dark-mode toggle). base="dark" is
+# Streamlit's built-in dark palette — the same look the cfb-model / nfl-model
+# dashboards show when viewed in dark mode — so all three read consistently.
+#
+# Streamlit applies this theme to native widgets, alerts (st.success/st.warning
+# used for the VALIDATED / NO-EDGE labels), dataframes, and — via the default
+# theme="streamlit" on st.plotly_chart — to the Plotly charts too, so their
+# backgrounds/fonts follow the dark canvas automatically.
+[theme]
+base = "dark"

@@ -1,0 +1,10 @@
+{
+  "event_id": "fef71589-test-moneyline",
+  "offer_type": "moneyline",
+  "away_team": "nym", "home_team": "phi",
+  "odds": {
+    "DraftKings": [{"side":"away","line":0,"odds":115},{"side":"home","line":0,"odds":-139}],
+    "FanDuel": [{"side":"away","line":0,"odds":110},{"side":"home","line":0,"odds":-130}],
+    "Pinnacle": [{"side":"away","line":0,"odds":117},{"side":"home","line":0,"odds":-127}]
+  }
+}

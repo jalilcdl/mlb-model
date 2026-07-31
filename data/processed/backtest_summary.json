@@ -1,0 +1,790 @@
+{
+  "baselines": {
+    "always_pick_home_moneyline_accuracy": 0.5298900047824008,
+    "always_pick_away_run_line_accuracy": 0.6437111429937828
+  },
+  "moneyline_elo": {
+    "accuracy": 0.5589032360911844,
+    "brier_score": 0.2446847211163242,
+    "log_loss": 0.6823150430674857,
+    "n_games": 6273
+  },
+  "moneyline_monte_carlo": {
+    "accuracy": 0.5509325681492109,
+    "brier_score": 0.24576734321696156,
+    "log_loss": 0.6846126012007677,
+    "n_games": 6273
+  },
+  "moneyline_closed_form": {
+    "accuracy": 0.5534831818906424,
+    "brier_score": 0.2486722554766179,
+    "log_loss": 0.691358397594353,
+    "n_games": 6273
+  },
+  "moneyline_blended": {
+    "accuracy": 0.5577873425793082,
+    "brier_score": 0.24468496940149306,
+    "log_loss": 0.6823174700264832,
+    "n_games": 6273
+  },
+  "moneyline_calibration_blended": [
+    {
+      "bin": "0.2-0.3",
+      "n": 36,
+      "mean_predicted": 0.27810348031414,
+      "actual_rate": 0.2777777777777778
+    },
+    {
+      "bin": "0.3-0.4",
+      "n": 516,
+      "mean_predicted": 0.3644625307354149,
+      "actual_rate": 0.40310077519379844
+    },
+    {
+      "bin": "0.4-0.5",
+      "n": 1983,
+      "mean_predicted": 0.45787478230658757,
+      "actual_rate": 0.4851235501765003
+    },
+    {
+      "bin": "0.5-0.6",
+      "n": 2741,
+      "mean_predicted": 0.5453442028204504,
+      "actual_rate": 0.5545421379058738
+    },
+    {
+      "bin": "0.6-0.7",
+      "n": 900,
+      "mean_predicted": 0.6382644948588923,
+      "actual_rate": 0.6122222222222222
+    },
+    {
+      "bin": "0.7-0.8",
+      "n": 97,
+      "mean_predicted": 0.7242662861626044,
+      "actual_rate": 0.7525773195876289
+    }
+  ],
+  "moneyline_ece_blended": 0.01998710693483945,
+  "mc_vs_closed_form_mean_abs_diff": 0.030207277901481353,
+  "run_line": {
+    "accuracy": 0.645783516658696,
+    "brier_score": 0.22573298362027738,
+    "log_loss": 0.6434019691952799,
+    "n_games": 6273
+  },
+  "run_line_calibration": [
+    {
+      "bin": "0.1-0.2",
+      "n": 214,
+      "mean_predicted": 0.17545093457943925,
+      "actual_rate": 0.21962616822429906
+    },
+    {
+      "bin": "0.2-0.3",
+      "n": 1522,
+      "mean_predicted": 0.26111925098554534,
+      "actual_rate": 0.29172141918528255
+    },
+    {
+      "bin": "0.3-0.4",
+      "n": 2751,
+      "mean_predicted": 0.34870919665576156,
+      "actual_rate": 0.3558705925118139
+    },
+    {
+      "bin": "0.4-0.5",
+      "n": 1413,
+      "mean_predicted": 0.43889101203113945,
+      "actual_rate": 0.4048124557678698
+    },
+    {
+      "bin": "0.5-0.6",
+      "n": 334,
+      "mean_predicted": 0.538498502994012,
+      "actual_rate": 0.5119760479041916
+    },
+    {
+      "bin": "0.6-0.7",
+      "n": 39,
+      "mean_predicted": 0.6245384615384617,
+      "actual_rate": 0.5641025641025641
+    }
+  ],
+  "run_line_ece": 0.0215366650725331,
+  "total_runs_monte_carlo": {
+    "mae": 3.5578735852064405,
+    "rmse": 4.488513386009637,
+    "mean_predicted_total": 8.90820739677985,
+    "mean_actual_total": 8.890801849194963,
+    "n_games": 6273,
+    "coverage_50pct_interval": 0.5569902757851108,
+    "coverage_80pct_interval": 0.8338912800892715,
+    "pit_calibration_bins": [
+      {
+        "bin": "0.0-0.1",
+        "n": 660,
+        "pct": 0.10521281683405069,
+        "expected_pct": 0.1
+      },
+      {
+        "bin": "0.1-0.2",
+        "n": 639,
+        "pct": 0.10186513629842181,
+        "expected_pct": 0.1
+      },
+      {
+        "bin": "0.2-0.3",
+        "n": 601,
+        "pct": 0.09580742866252193,
+        "expected_pct": 0.1
+      },
+      {
+        "bin": "0.3-0.4",
+        "n": 621,
+        "pct": 0.09899569583931134,
+        "expected_pct": 0.1
+      },
+      {
+        "bin": "0.4-0.5",
+        "n": 593,
+        "pct": 0.09453212179180616,
+        "expected_pct": 0.1
+      },
+      {
+        "bin": "0.5-0.6",
+        "n": 631,
+        "pct": 0.10058982942770604,
+        "expected_pct": 0.1
+      },
+      {
+        "bin": "0.6-0.7",
+        "n": 599,
+        "pct": 0.09548860194484297,
+        "expected_pct": 0.1
+      },
+      {
+        "bin": "0.7-0.8",
+        "n": 615,
+        "pct": 0.09803921568627451,
+        "expected_pct": 0.1
+      },
+      {
+        "bin": "0.8-0.9",
+        "n": 680,
+        "pct": 0.10840108401084012,
+        "expected_pct": 0.1
+      },
+      {
+        "bin": "0.9-1.0",
+        "n": 634,
+        "pct": 0.10106806950422445,
+        "expected_pct": 0.1
+      }
+    ],
+    "pit_mean_abs_deviation_from_uniform": 0.0034273872150486205
+  },
+  "total_runs_closed_form": {
+    "mae": 3.5574086301315084,
+    "rmse": 4.487675722752284,
+    "mean_predicted_total": 8.907074068428267,
+    "mean_actual_total": 8.890801849194963,
+    "n_games": 6273
+  },
+  "by_season": {
+    "2024": {
+      "baselines": {
+        "always_pick_home_moneyline_accuracy": 0.5227837613918807,
+        "always_pick_away_run_line_accuracy": 0.6466445733222866
+      },
+      "moneyline_elo": {
+        "accuracy": 0.5588235294117647,
+        "brier_score": 0.2440277002173351,
+        "log_loss": 0.681026505932152,
+        "n_games": 2414
+      },
+      "moneyline_monte_carlo": {
+        "accuracy": 0.5633802816901409,
+        "brier_score": 0.24490366528583266,
+        "log_loss": 0.6830354725652067,
+        "n_games": 2414
+      },
+      "moneyline_closed_form": {
+        "accuracy": 0.5650372825186413,
+        "brier_score": 0.24748657693047815,
+        "log_loss": 0.6892910171512492,
+        "n_games": 2414
+      },
+      "moneyline_blended": {
+        "accuracy": 0.5650372825186413,
+        "brier_score": 0.2439381923346622,
+        "log_loss": 0.6808938638540459,
+        "n_games": 2414
+      },
+      "moneyline_calibration_blended": [
+        {
+          "bin": "0.2-0.3",
+          "n": 9,
+          "mean_predicted": 0.2923467419600793,
+          "actual_rate": 0.2222222222222222
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 245,
+          "mean_predicted": 0.36429026949875887,
+          "actual_rate": 0.4
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 708,
+          "mean_predicted": 0.4555796593099769,
+          "actual_rate": 0.4661016949152542
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 1033,
+          "mean_predicted": 0.5457288152566379,
+          "actual_rate": 0.5517909002904162
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 381,
+          "mean_predicted": 0.640685504563753,
+          "actual_rate": 0.6194225721784777
+        },
+        {
+          "bin": "0.7-0.8",
+          "n": 38,
+          "mean_predicted": 0.7198385863073276,
+          "actual_rate": 0.6842105263157895
+        }
+      ],
+      "moneyline_ece_blended": 0.01348251168903997,
+      "mc_vs_closed_form_mean_abs_diff": 0.031227124507746718,
+      "run_line": {
+        "accuracy": 0.6512013256006628,
+        "brier_score": 0.22314323632974314,
+        "log_loss": 0.6379132309226075,
+        "n_games": 2414
+      },
+      "run_line_calibration": [
+        {
+          "bin": "0.1-0.2",
+          "n": 94,
+          "mean_predicted": 0.17807446808510638,
+          "actual_rate": 0.22340425531914893
+        },
+        {
+          "bin": "0.2-0.3",
+          "n": 600,
+          "mean_predicted": 0.25697333333333333,
+          "actual_rate": 0.2833333333333333
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 1004,
+          "mean_predicted": 0.35053735059760965,
+          "actual_rate": 0.3396414342629482
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 557,
+          "mean_predicted": 0.4404093357271095,
+          "actual_rate": 0.4236983842010772
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 152,
+          "mean_predicted": 0.5430032894736843,
+          "actual_rate": 0.5328947368421053
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 7,
+          "mean_predicted": 0.6167142857142858,
+          "actual_rate": 0.5714285714285714
+        }
+      ],
+      "run_line_ece": 0.017472245236122664,
+      "total_runs_monte_carlo": {
+        "mae": 3.4669763877381943,
+        "rmse": 4.359971699208105,
+        "mean_predicted_total": 8.934743164871582,
+        "mean_actual_total": 8.796603148301575,
+        "n_games": 2414,
+        "coverage_50pct_interval": 0.5646230323115161,
+        "coverage_80pct_interval": 0.8392709196354599,
+        "pit_calibration_bins": [
+          {
+            "bin": "0.0-0.1",
+            "n": 257,
+            "pct": 0.10646230323115162,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.1-0.2",
+            "n": 257,
+            "pct": 0.10646230323115162,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.2-0.3",
+            "n": 234,
+            "pct": 0.09693454846727423,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.3-0.4",
+            "n": 225,
+            "pct": 0.0932062966031483,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.4-0.5",
+            "n": 232,
+            "pct": 0.09610604805302403,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.5-0.6",
+            "n": 253,
+            "pct": 0.10480530240265121,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.6-0.7",
+            "n": 245,
+            "pct": 0.10149130074565037,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.7-0.8",
+            "n": 236,
+            "pct": 0.09776304888152444,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.8-0.9",
+            "n": 250,
+            "pct": 0.1035625517812759,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.9-1.0",
+            "n": 225,
+            "pct": 0.0932062966031483,
+            "expected_pct": 0.1
+          }
+        ],
+        "pit_mean_abs_deviation_from_uniform": 0.004556752278376141
+      },
+      "total_runs_closed_form": {
+        "mae": 3.466765746206672,
+        "rmse": 4.359003064992802,
+        "mean_predicted_total": 8.935574312903462,
+        "mean_actual_total": 8.796603148301575,
+        "n_games": 2414
+      }
+    },
+    "2025": {
+      "baselines": {
+        "always_pick_home_moneyline_accuracy": 0.5416149068322982,
+        "always_pick_away_run_line_accuracy": 0.6443064182194617
+      },
+      "moneyline_elo": {
+        "accuracy": 0.567287784679089,
+        "brier_score": 0.24313342940016844,
+        "log_loss": 0.6790367588156272,
+        "n_games": 2415
+      },
+      "moneyline_monte_carlo": {
+        "accuracy": 0.5490683229813664,
+        "brier_score": 0.24443326169772256,
+        "log_loss": 0.6816298859325665,
+        "n_games": 2415
+      },
+      "moneyline_closed_form": {
+        "accuracy": 0.5515527950310559,
+        "brier_score": 0.24730022150300254,
+        "log_loss": 0.6880198870511156,
+        "n_games": 2415
+      },
+      "moneyline_blended": {
+        "accuracy": 0.5623188405797102,
+        "brier_score": 0.243226800395943,
+        "log_loss": 0.6791768604377195,
+        "n_games": 2415
+      },
+      "moneyline_calibration_blended": [
+        {
+          "bin": "0.2-0.3",
+          "n": 20,
+          "mean_predicted": 0.2741080443864384,
+          "actual_rate": 0.3
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 180,
+          "mean_predicted": 0.3616967484943359,
+          "actual_rate": 0.36666666666666664
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 814,
+          "mean_predicted": 0.45886304126301813,
+          "actual_rate": 0.5036855036855037
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 1006,
+          "mean_predicted": 0.545489422825203,
+          "actual_rate": 0.5666003976143141
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 346,
+          "mean_predicted": 0.6374148792566537,
+          "actual_rate": 0.6242774566473989
+        },
+        {
+          "bin": "0.7-0.8",
+          "n": 49,
+          "mean_predicted": 0.7263129091697557,
+          "actual_rate": 0.8163265306122449
+        }
+      ],
+      "moneyline_ece_blended": 0.028195347870196275,
+      "mc_vs_closed_form_mean_abs_diff": 0.03050570620567349,
+      "run_line": {
+        "accuracy": 0.6530020703933748,
+        "brier_score": 0.2251791611801242,
+        "log_loss": 0.6421171293747848,
+        "n_games": 2415
+      },
+      "run_line_calibration": [
+        {
+          "bin": "0.1-0.2",
+          "n": 89,
+          "mean_predicted": 0.1748932584269663,
+          "actual_rate": 0.19101123595505617
+        },
+        {
+          "bin": "0.2-0.3",
+          "n": 595,
+          "mean_predicted": 0.2640159663865546,
+          "actual_rate": 0.29747899159663865
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 1036,
+          "mean_predicted": 0.34721476833976833,
+          "actual_rate": 0.36196911196911197
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 554,
+          "mean_predicted": 0.43739440433212995,
+          "actual_rate": 0.37725631768953066
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 115,
+          "mean_predicted": 0.5412782608695652,
+          "actual_rate": 0.5739130434782609
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 26,
+          "mean_predicted": 0.6251730769230769,
+          "actual_rate": 0.5769230769230769
+        }
+      ],
+      "run_line_ece": 0.031037060041407875,
+      "total_runs_monte_carlo": {
+        "mae": 3.6298863354037274,
+        "rmse": 4.585221519593945,
+        "mean_predicted_total": 8.869614699792962,
+        "mean_actual_total": 8.900207039337474,
+        "n_games": 2415,
+        "coverage_50pct_interval": 0.5532091097308489,
+        "coverage_80pct_interval": 0.8298136645962733,
+        "pit_calibration_bins": [
+          {
+            "bin": "0.0-0.1",
+            "n": 240,
+            "pct": 0.09937888198757763,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.1-0.2",
+            "n": 259,
+            "pct": 0.1072463768115942,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.2-0.3",
+            "n": 238,
+            "pct": 0.09855072463768116,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.3-0.4",
+            "n": 251,
+            "pct": 0.10393374741200828,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.4-0.5",
+            "n": 223,
+            "pct": 0.09233954451345756,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.5-0.6",
+            "n": 220,
+            "pct": 0.09109730848861283,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.6-0.7",
+            "n": 231,
+            "pct": 0.09565217391304348,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.7-0.8",
+            "n": 232,
+            "pct": 0.09606625258799172,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.8-0.9",
+            "n": 266,
+            "pct": 0.11014492753623188,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.9-1.0",
+            "n": 255,
+            "pct": 0.10559006211180125,
+            "expected_pct": 0.1
+          }
+        ],
+        "pit_mean_abs_deviation_from_uniform": 0.005383022774327123
+      },
+      "total_runs_closed_form": {
+        "mae": 3.6293239595146067,
+        "rmse": 4.584837503683992,
+        "mean_predicted_total": 8.866941825893628,
+        "mean_actual_total": 8.900207039337474,
+        "n_games": 2415
+      }
+    },
+    "2026": {
+      "baselines": {
+        "always_pick_home_moneyline_accuracy": 0.5221606648199446,
+        "always_pick_away_run_line_accuracy": 0.6378116343490304
+      },
+      "moneyline_elo": {
+        "accuracy": 0.5450138504155124,
+        "brier_score": 0.2483775313273185,
+        "log_loss": 0.6899518748631461,
+        "n_games": 1444
+      },
+      "moneyline_monte_carlo": {
+        "accuracy": 0.5332409972299169,
+        "brier_score": 0.2494423608033241,
+        "log_loss": 0.692237563734667,
+        "n_games": 1444
+      },
+      "moneyline_closed_form": {
+        "accuracy": 0.5373961218836565,
+        "brier_score": 0.25294904914466665,
+        "log_loss": 0.7003979816328368,
+        "n_games": 1444
+      },
+      "moneyline_blended": {
+        "accuracy": 0.5380886426592798,
+        "brier_score": 0.24837208712153006,
+        "log_loss": 0.68994985053696,
+        "n_games": 1444
+      },
+      "moneyline_calibration_blended": [
+        {
+          "bin": "0.2-0.3",
+          "n": 7,
+          "mean_predicted": 0.2712062465627944,
+          "actual_rate": 0.2857142857142857
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 91,
+          "mean_predicted": 0.37039708904722735,
+          "actual_rate": 0.4835164835164835
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 461,
+          "mean_predicted": 0.45965461807896507,
+          "actual_rate": 0.48156182212581344
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 702,
+          "mean_predicted": 0.544570134485176,
+          "actual_rate": 0.5413105413105413
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 173,
+          "mean_predicted": 0.634631907002376,
+          "actual_rate": 0.5722543352601156
+        },
+        {
+          "bin": "0.7-0.8",
+          "n": 10,
+          "mean_predicted": 0.7310630928776133,
+          "actual_rate": 0.7
+        }
+      ],
+      "moneyline_ece_blended": 0.023465947011870193,
+      "mc_vs_closed_form_mean_abs_diff": 0.02800325154265267,
+      "run_line": {
+        "accuracy": 0.6246537396121884,
+        "brier_score": 0.2309886146121884,
+        "log_loss": 0.6547265553148965,
+        "n_games": 1444
+      },
+      "run_line_calibration": [
+        {
+          "bin": "0.1-0.2",
+          "n": 31,
+          "mean_predicted": 0.16909677419354838,
+          "actual_rate": 0.2903225806451613
+        },
+        {
+          "bin": "0.2-0.3",
+          "n": 327,
+          "mean_predicted": 0.2634556574923547,
+          "actual_rate": 0.2966360856269113
+        },
+        {
+          "bin": "0.3-0.4",
+          "n": 711,
+          "mean_predicted": 0.34830520393811537,
+          "actual_rate": 0.369901547116737
+        },
+        {
+          "bin": "0.4-0.5",
+          "n": 302,
+          "mean_predicted": 0.4388360927152317,
+          "actual_rate": 0.4205298013245033
+        },
+        {
+          "bin": "0.5-0.6",
+          "n": 67,
+          "mean_predicted": 0.5235074626865672,
+          "actual_rate": 0.3582089552238806
+        },
+        {
+          "bin": "0.6-0.7",
+          "n": 6,
+          "mean_predicted": 0.6309166666666667,
+          "actual_rate": 0.5
+        }
+      ],
+      "run_line_ece": 0.032792243767313003,
+      "total_runs_monte_carlo": {
+        "mae": 3.589393698060942,
+        "rmse": 4.536587188562037,
+        "mean_predicted_total": 8.928390235457064,
+        "mean_actual_total": 9.032548476454293,
+        "n_games": 1444,
+        "coverage_50pct_interval": 0.5505540166204986,
+        "coverage_80pct_interval": 0.8317174515235457,
+        "pit_calibration_bins": [
+          {
+            "bin": "0.0-0.1",
+            "n": 163,
+            "pct": 0.1128808864265928,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.1-0.2",
+            "n": 123,
+            "pct": 0.08518005540166206,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.2-0.3",
+            "n": 129,
+            "pct": 0.08933518005540166,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.3-0.4",
+            "n": 145,
+            "pct": 0.10041551246537396,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.4-0.5",
+            "n": 138,
+            "pct": 0.09556786703601108,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.5-0.6",
+            "n": 158,
+            "pct": 0.10941828254847645,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.6-0.7",
+            "n": 123,
+            "pct": 0.08518005540166206,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.7-0.8",
+            "n": 147,
+            "pct": 0.1018005540166205,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.8-0.9",
+            "n": 164,
+            "pct": 0.11357340720221606,
+            "expected_pct": 0.1
+          },
+          {
+            "bin": "0.9-1.0",
+            "n": 154,
+            "pct": 0.10664819944598337,
+            "expected_pct": 0.1
+          }
+        ],
+        "pit_mean_abs_deviation_from_uniform": 0.00894736842105263
+      },
+      "total_runs_closed_form": {
+        "mae": 3.588666525792432,
+        "rmse": 4.535192104829493,
+        "mean_predicted_total": 8.926547597208067,
+        "mean_actual_total": 9.032548476454293,
+        "n_games": 1444
+      }
+    }
+  },
+  "_meta": {
+    "eval_seasons": [
+      2024,
+      2025,
+      2026
+    ],
+    "warmup_seasons": [
+      2023
+    ],
+    "n_games": 6273,
+    "mc_sims_per_game": 2000
+  }
+}

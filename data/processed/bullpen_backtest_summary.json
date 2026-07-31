@@ -1,0 +1,25 @@
+{
+  "n_games": 3512,
+  "baseline": {
+    "accuracy": 0.5427107061503417,
+    "brier": 0.2537175055525906,
+    "logloss": 0.7035865894463816
+  },
+  "bullpen_split": {
+    "accuracy": 0.5407175398633257,
+    "brier": 0.2528831295750682,
+    "logloss": 0.7011521544141303
+  },
+  "brier_improvement": {
+    "mean": 0.0008343759775223832,
+    "ci95": [
+      -7.236688513747955e-05,
+      0.001712033061740616
+    ],
+    "significant": false
+  },
+  "how_different": {
+    "mean_abs_prob_shift_pts": 2.161249110519303,
+    "max_abs_prob_shift_pts": 10.812650224557158
+  }
+}

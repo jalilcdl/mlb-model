@@ -1,0 +1,65 @@
+# Virtual environment -- 653MB, must never be committed. Streamlit Cloud builds
+# its own environment from requirements.txt.
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# pybaseball's local scrape cache
+.pybaseball_cache/
+
+# Secrets -- the Highlightly key is read from the HIGHLIGHTLY_API_KEY env var
+# (on Streamlit Cloud, set it under App settings -> Secrets instead).
+.env
+.streamlit/secrets.toml
+
+# --- Data: read this before changing ---
+# data/processed/games.csv IS committed on purpose. The dashboard hard-stops
+# without it (dashboard/app.py: `if not config.GAMES_FILE.exists(): st.stop()`),
+# and re-scraping Baseball-Reference from a cloud IP is unreliable. It's 320KB.
+#
+# Everything below is regenerable output, personal, or too large to be worth
+# versioning.
+data/processed/backtest_results.csv
+data/processed/pitcher_backtest_results.csv
+data/processed/pitcher_game_logs.csv
+data/processed/historical_starters.csv
+data/processed/predictions_*.csv
+data/processed/pitcher_watch.json
+data/processed/*.pdf
+data/processed/totals_backtest_results.csv
+
+# Bulk historical-odds set (regenerable via `python -m src.data.historical_odds`)
+data/raw/hist_odds_games.csv
+data/raw/historical_totals_2014_2019.csv
+
+# Personal betting record -- keep this OUT of a public repo.
+data/processed/bet_log.csv
+
+# Live odds snapshots go stale within hours; don't version them.
+odds/snapshots/
+odds/snapshots_archive/
+odds/odds.json
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Deploy cleanup (regenerable artifacts, not needed by the cloud dashboard) ---
+# Screenshots of the dashboard (regenerate via src/reports/screenshot_dashboard.py).
+data/processed/*.png
+# Pickled challenger model — only the shelved GBM experiment uses it.
+data/processed/*.pkl
+# Additional regenerable analysis outputs that slipped past the rules above.
+data/processed/bullpen_backtest_results.csv
+data/processed/home_road_backtest_results.csv
+data/processed/param_sweep.csv
+data/processed/snapshot_today.json
+# Bulk historical moneyline set (regenerable via the historical-odds loader).
+data/raw/historical_moneylines_2014_2019.csv

@@ -1,0 +1,16 @@
+{
+  "_comment": "Copy this file to odds.json in the same folder and fill in real sportsbook lines. Odds are American format (e.g. -150, +130). Delete games you don't have odds for -- the dashboard just skips edge calculations for those.",
+  "games": [
+    {
+      "date": "2026-07-16",
+      "home_team": "PHI",
+      "away_team": "NYM",
+      "moneyline": { "home": -150, "away": 130 },
+      "total": { "line": 8.5, "over": -110, "under": -110 },
+      "run_line": {
+        "home": { "line": -1.5, "odds": 145 },
+        "away": { "line": 1.5, "odds": -170 }
+      }
+    }
+  ]
+}

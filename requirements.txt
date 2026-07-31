@@ -1,0 +1,24 @@
+# Streamlit Community Cloud installs exactly this file. These are the packages
+# the dashboard (dashboard/app.py) and its import graph actually need at runtime:
+#   streamlit pandas numpy scipy requests plotly pyarrow pybaseball
+pandas<3.0
+numpy
+scipy
+pybaseball
+streamlit
+requests
+pyarrow
+plotly
+
+# Used by the daily picks-PDF generator (src/reports/play_chart.py). The dashboard
+# itself doesn't import it, but it's a committed feature, so keep it installable.
+matplotlib
+
+# pyreadr: only for the one-time historical-odds .rda loader (src/data/historical_odds.py).
+pyreadr
+
+# NOT listed on purpose: scikit-learn and xgboost. They're imported ONLY by the
+# shelved GBM/challenger experiments (src/models/challenger.py, gbm_independent.py,
+# src/backtest/ml_backtest.py, src/run_gbm_backtest.py), which the dashboard never
+# touches and which were tested and rejected. Adding them would slow the cloud
+# build for no runtime benefit. `pip install scikit-learn xgboost` to run those.

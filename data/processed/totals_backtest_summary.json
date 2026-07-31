@@ -1,0 +1,78 @@
+{
+  "n_games": 12320,
+  "n_decided": 11706,
+  "n_push": 614,
+  "model_ats_win_rate": 0.5024773620365625,
+  "baseline_always_under_win_rate": 0.5045275926875107,
+  "baseline_always_over_win_rate": 0.4954724073124893,
+  "model_vs_under_edge_mean": -0.0020502306509482316,
+  "model_vs_under_edge_95ci": [
+    -0.013924483171023407,
+    0.010167862634546375
+  ],
+  "model_beats_under_significantly": false,
+  "mean_model_total": 8.937550551948052,
+  "mean_market_line": 8.585592532467533,
+  "mean_actual_total": 9.046266233766234,
+  "over_calibration": [
+    {
+      "bin": "0.0-0.1",
+      "n": 4,
+      "mean_p_over": 0.0,
+      "actual_over_rate": 0.0
+    },
+    {
+      "bin": "0.1-0.2",
+      "n": 7,
+      "mean_p_over": 0.17152935870688424,
+      "actual_over_rate": 0.2857142857142857
+    },
+    {
+      "bin": "0.2-0.3",
+      "n": 188,
+      "mean_p_over": 0.2729045209454216,
+      "actual_over_rate": 0.526595744680851
+    },
+    {
+      "bin": "0.3-0.4",
+      "n": 2019,
+      "mean_p_over": 0.36287927276739,
+      "actual_over_rate": 0.4764735017335314
+    },
+    {
+      "bin": "0.4-0.5",
+      "n": 4618,
+      "mean_p_over": 0.45177439767959576,
+      "actual_over_rate": 0.5012992637505413
+    },
+    {
+      "bin": "0.5-0.6",
+      "n": 3578,
+      "mean_p_over": 0.5436138785490406,
+      "actual_over_rate": 0.5002794857462269
+    },
+    {
+      "bin": "0.6-0.7",
+      "n": 1139,
+      "mean_p_over": 0.6375219989063626,
+      "actual_over_rate": 0.48024582967515367
+    },
+    {
+      "bin": "0.7-0.8",
+      "n": 144,
+      "mean_p_over": 0.7310731186165338,
+      "actual_over_rate": 0.5555555555555556
+    },
+    {
+      "bin": "0.8-0.9",
+      "n": 9,
+      "mean_p_over": 0.8153984541430438,
+      "actual_over_rate": 0.5555555555555556
+    }
+  ],
+  "over_ece": 0.07417964750730066,
+  "roi_flat_100": -0.040725036112020496,
+  "roi_profit": -47672.727272731194,
+  "roi_turnover": 1170600.0,
+  "roi_prices_assumed_-110": true
+}

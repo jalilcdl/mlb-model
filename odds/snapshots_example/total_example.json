@@ -1,0 +1,9 @@
+{
+  "event_id": "fef71589-test-moneyline",
+  "offer_type": "total",
+  "away_team": "nym", "home_team": "phi",
+  "odds": {
+    "DraftKings": [{"side":"over","line":8.5,"odds":-105},{"side":"under","line":8.5,"odds":-115}],
+    "FanDuel": [{"side":"over","line":8.5,"odds":-110},{"side":"under","line":8.5,"odds":-110}]
+  }
+}

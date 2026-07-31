@@ -1,0 +1,322 @@
+{
+  "overall": {
+    "n_games": 4822,
+    "moneyline": {
+      "baseline_brier": 0.244875453079635,
+      "adjusted_brier": 0.2466061771567814,
+      "baseline_log_loss": 0.6827197080944291,
+      "adjusted_log_loss": 0.6865371159435059,
+      "baseline_accuracy": 0.552675238490253,
+      "adjusted_accuracy": 0.5476980506014102,
+      "brier_improvement_mean": -0.0017307240771464122,
+      "brier_improvement_95ci": [
+        -0.0036271310944628768,
+        0.00010462257880547409
+      ],
+      "statistically_significant": false
+    },
+    "run_line": {
+      "baseline_brier": 0.22452433295313148,
+      "adjusted_brier": 0.22589480677104934,
+      "baseline_log_loss": 0.6408102574328469,
+      "adjusted_log_loss": 0.6440879287110024,
+      "baseline_accuracy": 0.6511820821236002,
+      "adjusted_accuracy": 0.6447532144338449,
+      "brier_improvement_mean": -0.0013704738179178763,
+      "brier_improvement_95ci": [
+        -0.003085911700279964,
+        0.0003598487155226049
+      ],
+      "statistically_significant": false
+    },
+    "total_runs": {
+      "baseline_mae": 3.5479537536291996,
+      "adjusted_mae": 3.5485982994608047,
+      "baseline_rmse": 4.475307015702816,
+      "adjusted_rmse": 4.4875384858478915,
+      "mae_improvement_mean": -0.0006445458316051454,
+      "mae_improvement_95ci": [
+        -0.02152096381169639,
+        0.019654787951057642
+      ],
+      "statistically_significant": false
+    }
+  },
+  "active_only": {
+    "n_games": 4314,
+    "moneyline": {
+      "baseline_brier": 0.24511288885025495,
+      "adjusted_brier": 0.2470474163189615,
+      "baseline_log_loss": 0.6832208967773703,
+      "adjusted_log_loss": 0.6874878278502143,
+      "baseline_accuracy": 0.5542420027816412,
+      "adjusted_accuracy": 0.5486787204450626,
+      "brier_improvement_mean": -0.0019345274687065366,
+      "brier_improvement_95ci": [
+        -0.0039522737221835864,
+        5.8461101935554054e-05
+      ],
+      "statistically_significant": false
+    },
+    "run_line": {
+      "baseline_brier": 0.22484388966156701,
+      "adjusted_brier": 0.2263757451900788,
+      "baseline_log_loss": 0.6415056133204339,
+      "adjusted_log_loss": 0.6451692505256413,
+      "baseline_accuracy": 0.6499768196569309,
+      "adjusted_accuracy": 0.642790913305517,
+      "brier_improvement_mean": -0.0015318555285118213,
+      "brier_improvement_95ci": [
+        -0.0032495916000231796,
+        0.00029132467257765484
+      ],
+      "statistically_significant": false
+    },
+    "total_runs": {
+      "baseline_mae": 3.556713838664812,
+      "adjusted_mae": 3.557434283727399,
+      "baseline_rmse": 4.478558306859392,
+      "adjusted_rmse": 4.4922180208717055,
+      "mae_improvement_mean": -0.0007204450625869289,
+      "mae_improvement_95ci": [
+        -0.0244479485396384,
+        0.021720407394529424
+      ],
+      "statistically_significant": false
+    }
+  },
+  "inactive_only": {
+    "n_games": 508,
+    "moneyline": {
+      "baseline_brier": 0.2428591186023622,
+      "adjusted_brier": 0.2428591186023622,
+      "baseline_log_loss": 0.6784635506570095,
+      "adjusted_log_loss": 0.6784635506570095,
+      "baseline_accuracy": 0.5393700787401575,
+      "adjusted_accuracy": 0.5393700787401575,
+      "brier_improvement_mean": 0.0,
+      "brier_improvement_95ci": [
+        0.0,
+        0.0
+      ],
+      "statistically_significant": false
+    },
+    "run_line": {
+      "baseline_brier": 0.22181061712598424,
+      "adjusted_brier": 0.22181061712598424,
+      "baseline_log_loss": 0.6349052076315675,
+      "adjusted_log_loss": 0.6349052076315675,
+      "baseline_accuracy": 0.6614173228346457,
+      "adjusted_accuracy": 0.6614173228346457,
+      "brier_improvement_mean": 0.0,
+      "brier_improvement_95ci": [
+        0.0,
+        0.0
+      ],
+      "statistically_significant": false
+    },
+    "total_runs": {
+      "baseline_mae": 3.473562007874016,
+      "adjusted_mae": 3.473562007874016,
+      "baseline_rmse": 4.44760084916399,
+      "adjusted_rmse": 4.44760084916399,
+      "mae_improvement_mean": 0.0,
+      "mae_improvement_95ci": [
+        0.0,
+        0.0
+      ],
+      "statistically_significant": false
+    }
+  },
+  "by_season": {
+    "2024": {
+      "n_games": 2412,
+      "moneyline": {
+        "baseline_brier": 0.24472989915008286,
+        "adjusted_brier": 0.24761057276119403,
+        "baseline_log_loss": 0.6825994196088079,
+        "adjusted_log_loss": 0.6886827474520565,
+        "baseline_accuracy": 0.5580431177446102,
+        "adjusted_accuracy": 0.5451907131011609,
+        "brier_improvement_mean": -0.0028806736111111116,
+        "brier_improvement_95ci": [
+          -0.005549976129767826,
+          -0.00021990281923715488
+        ],
+        "statistically_significant": true
+      },
+      "run_line": {
+        "baseline_brier": 0.22369905151326697,
+        "adjusted_brier": 0.22547231768242124,
+        "baseline_log_loss": 0.639191321362754,
+        "adjusted_log_loss": 0.6432414166726483,
+        "baseline_accuracy": 0.650497512437811,
+        "adjusted_accuracy": 0.6442786069651741,
+        "brier_improvement_mean": -0.0017732661691542287,
+        "brier_improvement_95ci": [
+          -0.004242508709058872,
+          0.0005744654798922042
+        ],
+        "statistically_significant": false
+      },
+      "total_runs": {
+        "baseline_mae": 3.4676583747927032,
+        "adjusted_mae": 3.4540449834162517,
+        "baseline_rmse": 4.3610324621569525,
+        "adjusted_rmse": 4.359051745996423,
+        "mae_improvement_mean": 0.01361339137645108,
+        "mae_improvement_95ci": [
+          -0.01594870439469319,
+          0.04233200145107792
+        ],
+        "statistically_significant": false
+      }
+    },
+    "2025": {
+      "n_games": 2410,
+      "moneyline": {
+        "baseline_brier": 0.24502112780082985,
+        "adjusted_brier": 0.2456009480290456,
+        "baseline_log_loss": 0.6828400964045195,
+        "adjusted_log_loss": 0.6843897038278941,
+        "baseline_accuracy": 0.5473029045643154,
+        "adjusted_accuracy": 0.5502074688796681,
+        "brier_improvement_mean": -0.0005798202282157671,
+        "brier_improvement_95ci": [
+          -0.0033289642427385886,
+          0.0021374885658713687
+        ],
+        "statistically_significant": false
+      },
+      "run_line": {
+        "baseline_brier": 0.22535029927385888,
+        "adjusted_brier": 0.22631764647302904,
+        "baseline_log_loss": 0.6424305370183505,
+        "adjusted_log_loss": 0.6449351432489732,
+        "baseline_accuracy": 0.6518672199170125,
+        "adjusted_accuracy": 0.6452282157676349,
+        "brier_improvement_mean": -0.0009673471991701236,
+        "brier_improvement_95ci": [
+          -0.003476181179979253,
+          0.0014197799740663917
+        ],
+        "statistically_significant": false
+      },
+      "total_runs": {
+        "baseline_mae": 3.6283157676348554,
+        "adjusted_mae": 3.6432300829875515,
+        "baseline_rmse": 4.586826747978945,
+        "adjusted_rmse": 4.612549673865819,
+        "mae_improvement_mean": -0.014914315352697105,
+        "mae_improvement_95ci": [
+          -0.043032422199170126,
+          0.016240674273858915
+        ],
+        "statistically_significant": false
+      }
+    }
+  },
+  "by_season_active_only": {
+    "2024": {
+      "n_games": 2154,
+      "moneyline": {
+        "baseline_brier": 0.24463639948932223,
+        "adjusted_brier": 0.2478621120009285,
+        "baseline_log_loss": 0.6824137659054746,
+        "adjusted_log_loss": 0.6892257374736807,
+        "baseline_accuracy": 0.5612813370473537,
+        "adjusted_accuracy": 0.5468895078922934,
+        "brier_improvement_mean": -0.0032257125116063145,
+        "brier_improvement_95ci": [
+          -0.006152835315111421,
+          -0.00019405324686629883
+        ],
+        "statistically_significant": true
+      },
+      "run_line": {
+        "baseline_brier": 0.22578155919220058,
+        "adjusted_brier": 0.2277672221448468,
+        "baseline_log_loss": 0.6436448496354883,
+        "adjusted_log_loss": 0.6481800538543668,
+        "baseline_accuracy": 0.6443825441039925,
+        "adjusted_accuracy": 0.6374187558031569,
+        "brier_improvement_mean": -0.0019856629526462393,
+        "brier_improvement_95ci": [
+          -0.004652789049442898,
+          0.0008120968082636946
+        ],
+        "statistically_significant": false
+      },
+      "total_runs": {
+        "baseline_mae": 3.4594122562674094,
+        "adjusted_mae": 3.4441682915506036,
+        "baseline_rmse": 4.345294436088831,
+        "adjusted_rmse": 4.343068377553255,
+        "mae_improvement_mean": 0.015243964716805943,
+        "mae_improvement_95ci": [
+          -0.017906360259981442,
+          0.04846043987929431
+        ],
+        "statistically_significant": false
+      }
+    },
+    "2025": {
+      "n_games": 2160,
+      "moneyline": {
+        "baseline_brier": 0.24558805462962963,
+        "adjusted_brier": 0.24623498368055557,
+        "baseline_log_loss": 0.6840257856190665,
+        "adjusted_log_loss": 0.6857547457534798,
+        "baseline_accuracy": 0.5472222222222223,
+        "adjusted_accuracy": 0.5504629629629629,
+        "brier_improvement_mean": -0.000646929050925925,
+        "brier_improvement_95ci": [
+          -0.003648349059606479,
+          0.0023461027401620368
+        ],
+        "statistically_significant": false
+      },
+      "run_line": {
+        "baseline_brier": 0.2239088247685185,
+        "adjusted_brier": 0.22498813344907406,
+        "baseline_log_loss": 0.6393723193284769,
+        "adjusted_log_loss": 0.6421668105394956,
+        "baseline_accuracy": 0.6555555555555556,
+        "adjusted_accuracy": 0.6481481481481481,
+        "brier_improvement_mean": -0.0010793086805555541,
+        "brier_improvement_95ci": [
+          -0.003708532268518518,
+          0.0016843557609953702
+        ],
+        "statistically_significant": false
+      },
+      "total_runs": {
+        "baseline_mae": 3.6537451388888886,
+        "adjusted_mae": 3.6703856481481485,
+        "baseline_rmse": 4.607615314730785,
+        "adjusted_rmse": 4.63617752706904,
+        "mae_improvement_mean": -0.016640509259259268,
+        "mae_improvement_95ci": [
+          -0.048738854166666665,
+          0.0173832696759259
+        ],
+        "statistically_significant": false
+      }
+    }
+  },
+  "pitcher_factor_stats": {
+    "mean_home_factor": 0.9587886984135509,
+    "mean_away_factor": 0.9510249302417658,
+    "pct_games_with_any_adjustment": 0.894649523019494,
+    "pct_games_with_both_adjusted": 0.7308170883450851
+  },
+  "_meta": {
+    "seasons": [
+      2024,
+      2025
+    ],
+    "n_sims": 2000,
+    "min_ip_for_adjustment": 15,
+    "n_games_total": 4822
+  }
+}

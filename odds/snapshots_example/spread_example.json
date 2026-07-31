@@ -1,0 +1,9 @@
+{
+  "event_id": "fef71589-test-moneyline",
+  "offer_type": "spread",
+  "away_team": "nym", "home_team": "phi",
+  "odds": {
+    "DraftKings": [{"side":"away","line":1.5,"odds":-170},{"side":"home","line":-1.5,"odds":145}],
+    "FanDuel": [{"side":"away","line":1.5,"odds":-165},{"side":"home","line":-1.5,"odds":140}]
+  }
+}
