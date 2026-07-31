@@ -446,24 +446,63 @@ def _game_card(g):
     tstr = f"{when[11:16]}Z" if len(when) >= 16 else ""
     status = g.get("status") or ""
 
-    with st.container(border=True):
-        top = st.container(horizontal=True)
-        top.caption(f":material/schedule: {tstr}" if tstr else " ")
-        if status and status != "Scheduled":
-            top.caption(status)
+    # Tiny totals badge for the top-right corner: the model's over/under lean vs a
+    # loaded market line if one is present, else the model's own projected total.
+    # Deliberately small and unobtrusive -- totals is REFERENCE-ONLY (not a
+    # validated market), which the hover tooltip states outright.
+    et = g.get("expected_total")
+    tline = g.get("total_line")
+    mover = g.get("model_over_prob")
+    if pd.notna(tline) and pd.notna(mover):
+        lean = "Over" if mover >= 0.5 else "Under"
+        ou_txt = f"O/U {tline:g} · {lean[0]}"
+        ou_tip = (f"Model leans {lean} the {tline:g} line ({pct(mover)} over). "
+                  "Totals is reference-only — not a validated market.")
+    elif pd.notna(et):
+        ou_txt = f"O/U {float(et):.1f}"
+        ou_tip = ("Model's projected total runs (no market line loaded). "
+                  "Reference-only — totals is not a validated market.")
+    else:
+        ou_txt = ou_tip = ""
+    badge_html = (
+        f'<span title="{ou_tip}" style="font-size:0.72rem;padding:1px 8px;'
+        f'border-radius:10px;background:rgba(255,255,255,0.08);color:#aeb4bf;'
+        f'white-space:nowrap;">{ou_txt}</span>' if ou_txt else ""
+    )
+    status_txt = f" · {status}" if status and status != "Scheduled" else ""
 
-        # Matchup with logos.
-        for side, team, name, prob in (
-            ("away", away, g.get("away_team_name", ""), g["away_win_prob"]),
-            ("home", home, g.get("home_team_name", ""), g["home_win_prob"]),
+    with st.container(border=True):
+        st.markdown(
+            f'<div style="display:flex;align-items:center;justify-content:space-between;'
+            f'gap:8px;margin-bottom:4px;">'
+            f'<span style="font-size:0.8rem;color:#8b929e;">&#128337; {tstr}{status_txt}</span>'
+            f'{badge_html}</div>',
+            unsafe_allow_html=True,
+        )
+
+        # Matchup with logos. `sp` is that side's probable starter -- the SAME
+        # field driving the PDF's "*" caveat -- so an "SP TBD" marker appears
+        # whenever a starter isn't announced yet and clears itself on the next
+        # refresh once the schedule confirms one (get_predictions re-pulls live).
+        for side, team, prob, sp in (
+            ("away", away, g["away_win_prob"], g.get("away_probable_pitcher")),
+            ("home", home, g["home_win_prob"], g.get("home_probable_pitcher")),
         ):
             # "@ " marks the home side. Logo sits on a light chip (see _logo_chip)
             # so dark team logos stay legible on the dark canvas.
             prefix = "@ " if side == "home" else ""
+            tbd = pd.isna(sp) or str(sp).strip().lower() in ("", "tbd", "nan", "none")
+            sp_marker = (
+                '<span title="Probable starter not announced yet — this team is modelled at '
+                'league average until one is confirmed (updates automatically on refresh)." '
+                'style="font-size:0.6rem;font-weight:600;padding:0 5px;border-radius:8px;'
+                'background:rgba(255,193,7,0.18);color:#ffca7a;white-space:nowrap;'
+                'margin-left:6px;vertical-align:middle;">SP TBD</span>'
+            ) if tbd else ""
             st.markdown(
                 f'<div style="display:flex;align-items:center;gap:8px;margin:3px 0;">'
                 f'{_logo_chip(team, 24)}'
-                f'<span style="font-size:0.95rem;">{prefix}<b>{team}</b> · {pct(prob)}</span>'
+                f'<span style="font-size:0.95rem;">{prefix}<b>{team}</b> · {pct(prob)}{sp_marker}</span>'
                 f'</div>',
                 unsafe_allow_html=True,
             )
