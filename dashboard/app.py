@@ -587,10 +587,21 @@ def render_game_detail():
         f"{home} {g['expected_home_runs']:.1f}**  (total {g['expected_total']:.2f}). "
         "Simulated means, not integer score predictions."
     )
+    # Starting pitchers. Same fields as the scoreboard's "SP TBD" marker; a NaN
+    # here must read as "not announced" rather than a literal "nan" (note NaN is
+    # truthy in Python, so the old `x or 'TBD'` fallback silently printed "nan").
+    def _tbd(sp):
+        return pd.isna(sp) or str(sp).strip().lower() in ("", "tbd", "nan", "none")
+    a_sp, h_sp = g.get("away_probable_pitcher"), g.get("home_probable_pitcher")
     st.caption(
-        f"SP: {g.get('away_probable_pitcher') or 'TBD'} ({away}) vs "
-        f"{g.get('home_probable_pitcher') or 'TBD'} ({home})"
+        f"Starting pitchers — **{away}:** {'TBD — not announced yet' if _tbd(a_sp) else a_sp}"
+        f"  ·  **{home}:** {'TBD — not announced yet' if _tbd(h_sp) else h_sp}"
     )
+    if _tbd(a_sp) or _tbd(h_sp):
+        st.caption(
+            "A pitcher shown as **TBD** isn't confirmed yet, so that side is modelled at league "
+            "average until the starter is announced — this updates automatically on refresh."
+        )
     if g.get("away_pitcher_changed"):
         st.warning(
             f"⚠️ Away pitcher changed since last check: was **{g.get('away_pitcher_previous')}**, "
