@@ -312,6 +312,30 @@ def _marker_note(rows):
 
 
 def render(rows, date_str, out_path, title=None, footnote=None, excluded=None):
+    # Fail soft when there is nothing to chart. An all-Final or line-less slate
+    # leaves every game unmatched, so build_*_rows returns an empty, column-less
+    # frame -- and sort_values("edge") on that used to raise KeyError and kill
+    # the whole send. Emit a valid one-page "no lines available" PDF instead,
+    # still naming the games that were dropped so the reader knows why.
+    if rows is None or rows.empty or "edge" not in rows.columns:
+        fig, ax = plt.subplots(figsize=(11, 4.2))
+        ax.axis("off")
+        ax.set_title(title or f"MLB model vs market, {date_str}", fontsize=11, loc="left")
+        ax.text(0.5, 0.62, "No market lines available for this slate.",
+                ha="center", va="center", fontsize=13, color="#616161", transform=ax.transAxes)
+        ax.text(0.5, 0.46,
+                "Every game was excluded — already final, in progress, or no line posted — "
+                "so there is nothing to compare against a market number.",
+                ha="center", va="center", fontsize=8.5, color="#9e9e9e",
+                transform=ax.transAxes, wrap=True)
+        fig.text(0.01, 0.005, (footnote or "") + _excluded_note(excluded),
+                 fontsize=7, color="#616161", wrap=True)
+        fig.tight_layout(rect=(0, 0.02, 1, 1))
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        fig.savefig(out_path, format="pdf")
+        plt.close(fig)
+        return out_path
+
     rows = rows.sort_values("edge").reset_index(drop=True)
     n = len(rows)
     fig_h = max(6.0, 0.34 * n + 2.6)
