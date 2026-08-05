@@ -259,9 +259,23 @@ def run_totals(date_str=None, totals_items=None, n_sims=20000):
     date_str = date_str or dt.date.today().isoformat()
     preds = _load_or_build_predictions(date_str)
     if totals_items is None:
-        from src.data import espn_odds
-        items, _ = espn_odds.normalize_slate(date_str)
-        totals_items = [i for i in items if i["offer_type"] == "total"]
+        # PRIMARY source: a connector totals snapshot written by the orchestrator
+        # from get_game_odds (see src/data/connector_odds.py). The connector is
+        # richer than ESPN (~20 books incl. Novig) and doesn't rate-limit us.
+        from src.data import connector_odds
+        totals_items = connector_odds.load_snapshot(date_str)
+    if totals_items is None:
+        # FALLBACK: ESPN's public scoreboard. Wrapped because ESPN 403s us
+        # intermittently -- a fetch failure must degrade to an empty chart
+        # (render() fails soft) rather than crashing the whole send.
+        try:
+            from src.data import espn_odds
+            items, _ = espn_odds.normalize_slate(date_str)
+            totals_items = [i for i in items if i["offer_type"] == "total"]
+        except Exception as exc:
+            print(f"[!] ESPN totals fetch failed ({type(exc).__name__}: {exc}); "
+                  "no totals source available for this slate.")
+            totals_items = []
     rows, unmatched = build_totals_rows(preds, totals_items, date_str, n_sims=n_sims)
     if unmatched:
         print("[!] games excluded from chart:")
