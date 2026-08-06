@@ -40,6 +40,7 @@ data/raw/historical_totals_2014_2019.csv
 
 # Personal betting record -- keep this OUT of a public repo.
 data/processed/bet_log.csv
+data/processed/projection_compare_log.csv
 
 # Live odds snapshots go stale within hours; don't version them.
 odds/snapshots/

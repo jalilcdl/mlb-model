@@ -195,7 +195,7 @@ def _bet_log_status_totals(date_str):
     return out
 
 
-def build_totals_rows(preds, totals_items, date_str, n_sims=20000):
+def build_totals_rows(preds, totals_items, date_str, n_sims=20000, projections=None):
     """Rows for the totals chart: model P(over)/P(under) at each game's REAL
     posted line, against that book's de-vigged two-way price.
 
@@ -203,11 +203,21 @@ def build_totals_rows(preds, totals_items, date_str, n_sims=20000):
     implicitly no-push (a push refunds everyone), so the model probability has
     to be normalized the same way or whole-number lines would compare a
     push-inclusive number against a push-exclusive one.
+
+    The total the over/under is scored from is a BLEND of our model and the
+    connector's independent projection when `projections` carries a connector
+    total for the game (config.TOTALS_CONNECTOR_WEIGHT, 0.5 by default). The
+    blend is applied by rescaling both teams' mus by blended_total/our_total, so
+    the negative-binomial shape and the home/away split are preserved and the
+    whole-number push math still works -- only the mean moves. Games with no
+    connector projection fall back to our-model-only, unchanged.
     """
+    from src.data import connector_projections
     status = _bet_log_status_totals(date_str)
     by_matchup, unmatched = _events_by_matchup(totals_items)
     suffix = game_suffixes(preds)
     dh = _doubleheader_matchups(preds)
+    projections = projections or {}
 
     rows = []
     for _, g in preds.iterrows():
@@ -227,9 +237,19 @@ def build_totals_rows(preds, totals_items, date_str, n_sims=20000):
         fair_o, fair_u = remove_vig_two_way(
             american_to_prob(offers["over"]), american_to_prob(offers["under"])
         )
+
+        # --- Totals ensemble: blend our total with the connector's projection. ---
+        mu_h, mu_a = float(g["expected_home_runs"]), float(g["expected_away_runs"])
+        our_total = mu_h + mu_a
+        proj = projections.get((a, h))
+        connector_total = proj.get("connector_total") if proj else None
+        blended_total = connector_projections.blend_total(our_total, connector_total)
+        if connector_total is not None and our_total > 0 and blended_total != our_total:
+            scale = blended_total / our_total  # rescale mus to hit the blended mean
+            mu_h, mu_a = mu_h * scale, mu_a * scale
+
         sim = monte_carlo.simulate_game(
-            g["expected_home_runs"], g["expected_away_runs"],
-            n_sims=n_sims, overdispersion=g.get("overdispersion"),
+            mu_h, mu_a, n_sims=n_sims, overdispersion=g.get("overdispersion"),
         )
         over_p, push_p, under_p = monte_carlo.total_outcome_probs(
             sim["home_runs"], sim["away_runs"], line
@@ -251,6 +271,10 @@ def build_totals_rows(preds, totals_items, date_str, n_sims=20000):
                 "best": offers[side.lower()],
                 "push_prob": float(push_p),
                 "status": status.get(pick.lower(), "pending"),
+                # Transparency: the numbers behind the blended total.
+                "our_total": round(our_total, 2),
+                "connector_total": round(float(connector_total), 2) if connector_total is not None else None,
+                "blended_total": round(blended_total, 2),
             })
     return pd.DataFrame(rows), unmatched
 
@@ -276,13 +300,27 @@ def run_totals(date_str=None, totals_items=None, n_sims=20000):
             print(f"[!] ESPN totals fetch failed ({type(exc).__name__}: {exc}); "
                   "no totals source available for this slate.")
             totals_items = []
-    rows, unmatched = build_totals_rows(preds, totals_items, date_str, n_sims=n_sims)
+    # Connector model projections (agent/orchestrator-pulled snapshot). When
+    # present, the totals edge is scored from a blend of our total and theirs.
+    from src.data import connector_projections
+    projections = connector_projections.load_snapshot(date_str)
+    rows, unmatched = build_totals_rows(preds, totals_items, date_str, n_sims=n_sims,
+                                        projections=projections)
     if unmatched:
         print("[!] games excluded from chart:")
         for u in unmatched:
             print("   ", u)
     out = config.PROCESSED_DIR / "play_probabilities_totals.pdf"
     n_push = int((rows["push_prob"] > 0).sum() // 2) if not rows.empty else 0
+    n_blended = int((rows["connector_total"].notna()).sum() // 2) if not rows.empty else 0
+    w = config.TOTALS_CONNECTOR_WEIGHT
+    blend_note = (
+        f" TOTAL IS BLENDED: the over/under is scored from {int((1 - w) * 100)}% our model / "
+        f"{int(w * 100)}% the connector's independent projection ({n_blended} game(s) blended; "
+        "raw our-model total is in projection_compare_log.csv). This is a variance-reduction "
+        "ensemble, not a validated weighting -- the nightly log will let us tune it."
+        if n_blended else ""
+    )
     render(
         rows, date_str, out, excluded=unmatched,
         title=(f"MLB model vs market — TOTALS (over/under), {date_str}\n"
@@ -291,7 +329,7 @@ def run_totals(date_str=None, totals_items=None, n_sims=20000):
         footnote=("NOT A VALIDATED MARKET. The totals model was tested against 11,706 real closing "
                   "lines (2015-19): 50.25% ATS vs a 52.38% break-even, and recalibration did not fix it "
                   "(AUC 0.503 = no ability to rank games). Apparent edges here are expected to be noise. "
-                  f"{n_push} game(s) on whole-number lines can push."),
+                  f"{n_push} game(s) on whole-number lines can push." + blend_note),
     )
     return out, rows
 

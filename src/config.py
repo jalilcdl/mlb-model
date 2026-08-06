@@ -73,6 +73,14 @@ EXTRA_INNING_HOME_WIN_PROB = 0.52  # mild home-field edge in a hypothetical extr
 # ---- Ensemble ----
 ELO_BLEND_WEIGHT = 0.5   # weight on Elo win prob vs Monte Carlo win prob (rest = 1 - this)
 
+# Totals ensemble: the over/under edge blends our model's projected total with the
+# connector's independent model projection (get_game_projections mean). This is the
+# WEIGHT ON THE CONNECTOR; our weight is (1 - this). 0.5 = equal weight -- the safe
+# default (averaging two decent independent models tends to cut error even without
+# knowing which is better), pending real paired data from the nightly compare log to
+# tune it. Set to 0.0 to fall back to our-model-only totals.
+TOTALS_CONNECTOR_WEIGHT = 0.5
+
 # ---- Run line ----
 RUN_LINE = 1.5  # standard MLB run line (favorite -1.5 / underdog +1.5)
 
