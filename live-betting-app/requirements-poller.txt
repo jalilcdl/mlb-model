@@ -1,0 +1,7 @@
+# Minimal deps for the scheduled poller (core/poller.py) -- deliberately
+# excludes streamlit/pandas/plotly (dashboard-only) so CI installs fast on
+# every ~5 minute run. requirements.txt (superset) is what Streamlit Cloud uses.
+requests
+numpy
+pandas
+python-dotenv

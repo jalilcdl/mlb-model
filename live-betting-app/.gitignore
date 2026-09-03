@@ -1,0 +1,18 @@
+# Secrets -- never commit. Local dev uses .env; deployed uses platform secrets
+# (GitHub Actions repo secrets for the poller, Streamlit Cloud's secrets manager
+# for the dashboard).
+.env
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+venv/
+.venv/
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,9 @@
+# Dashboard (Streamlit Community Cloud installs exactly this file)
+streamlit
+pandas
+plotly
+
+# Poller (core/poller.py) + vendored sport adapters
+requests
+numpy
+python-dotenv

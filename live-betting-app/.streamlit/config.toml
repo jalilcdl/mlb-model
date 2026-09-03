@@ -1,0 +1,3 @@
+# Dark theme, matching the mlb-model / cfb-model dashboards this app unifies.
+[theme]
+base = "dark"
