@@ -20,12 +20,20 @@ their "database":
 
 1. **GitHub Actions** (`.github/workflows/poll-live-signals.yml`, at the repo
    ROOT -- GitHub only discovers workflow files there, not in subfolders) runs
-   `live-betting-app/core/poller.py` on a ~5 minute cron. It polls every
+   `live-betting-app/core/poller.py` roughly every 5 minutes. It polls every
    registered sport, appends any new game states to
    `live-betting-app/data/live_signal_log.jsonl`, sends a Telegram push for
    any newly-flagged game, and commits the changes back to this repo -- but
    only when something actually changed (no live games right now = no
    commit). This is fully independent of anything mlb-model's own code does.
+
+   The 5-minute cadence is driven by a small **Cloudflare Worker**
+   (`cloudflare-worker/`, deployed separately on Cloudflare's free tier)
+   firing a `repository_dispatch` event on a Cron Trigger -- NOT GitHub
+   Actions' own `schedule:` trigger, which is confirmed (real run timestamps)
+   to land 150-250+ minutes apart in practice, a documented best-effort
+   limitation with no fix on the workflow-file side. `schedule:` stays wired
+   up as a slow backstop only, in case the Worker or its secret ever breaks.
 
 2. **Streamlit Community Cloud** hosts `live-betting-app/app.py` as its own
    separate deployed app (a second Streamlit Cloud app pointed at the same

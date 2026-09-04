@@ -8,17 +8,21 @@ name: Poll live signals
 
 on:
   schedule:
-    # EXPERIMENTAL/UNRELIABLE: confirmed via real run timestamps to land
-    # 150-250+ minutes apart in practice, not every 5 minutes -- GitHub's
-    # schedule trigger is a documented best-effort, low-priority queue with
-    # no timing guarantee, worse on lower-activity repos. Kept only as a
-    # slow backstop while repository_dispatch (below) is being verified as
-    # the real fix; not something to rely on alone.
+    # UNRELIABLE BY ITSELF -- keep only as a slow backstop. Confirmed via
+    # real run timestamps to land 150-250+ minutes apart in practice, not
+    # every 5 minutes: GitHub's schedule trigger is a documented best-effort,
+    # low-priority queue with no timing guarantee, worse on lower-activity
+    # repos. The actual 5-minute cadence comes from repository_dispatch
+    # below, fired by an external Cloudflare Worker cron
+    # (cloudflare-worker/poll-trigger.js) -- verified empirically (3/3
+    # trials, ~8s from fire to run start) to avoid the schedule queue
+    # entirely. This trigger stays wired up purely as redundancy: if the
+    # Worker or its secret ever breaks, a real (if slow) row still lands
+    # instead of total silence.
     - cron: "*/5 * * * *"
   workflow_dispatch: {}   # lets you trigger a run manually from the Actions tab
   repository_dispatch:
-    types: [poll_test]   # TEMPORARY event name while empirically verifying
-                         # dispatch-triggered timing -- see investigation log
+    types: [poll]   # fired every 5 min by cloudflare-worker/poll-trigger.js
 
 permissions:
   contents: write   # the poller commits new data/ files back to this repo
