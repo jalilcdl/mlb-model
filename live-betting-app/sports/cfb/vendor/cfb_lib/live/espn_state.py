@@ -28,6 +28,8 @@ from __future__ import annotations
 
 import datetime as _dt
 import json
+import time
+import urllib.error
 import urllib.request
 from typing import Iterator
 
@@ -35,14 +37,31 @@ from cfb_lib.live.wp_model import GameState
 
 BASE = "https://site.api.espn.com/apis/site/v2/sports/football/college-football"
 # ESPN 403s on unusual User-Agent strings -- a custom one naming this
-# project was rejected outright. A plain browser UA is required.
+# project was rejected outright. A plain browser UA is required. Tested
+# directly: this exact bare string gets 200; a full realistic Chrome UA
+# (with version numbers, plus Referer/Origin) gets 403 on the SAME network --
+# a fuller "browser-like" UA makes it worse here, not better. A 403 seen only
+# from GitHub Actions' runners (not reproducible from other networks with this
+# same header) is most consistent with ESPN blocking that IP range, which no
+# header change fixes -- retrying gives a persistent block a couple of chances
+# to be a transient/soft block instead.
 UA = {"User-Agent": "Mozilla/5.0"}
+_RETRIES = 2
+_BACKOFF = 1.0
 
 
 def _get(url: str, timeout: int = 30) -> dict:
     req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.load(r)
+    last = None
+    for attempt in range(_RETRIES):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return json.load(r)
+        except (urllib.error.URLError, TimeoutError) as e:
+            last = e
+            if attempt < _RETRIES - 1:
+                time.sleep(_BACKOFF * (2 ** attempt))
+    raise last
 
 
 def fetch_scoreboard(date: str | None = None) -> dict:

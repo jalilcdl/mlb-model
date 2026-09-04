@@ -83,14 +83,30 @@ def _to_unified_row(game, meta, state, ml, signal) -> dict:
 
 
 def poll() -> list[dict]:
-    """Unified rows for every MLB game currently in progress. Empty if none."""
-    date_str = dt.date.today().isoformat()
-    try:
-        schedule = statsapi_client.get_schedule(date_str)
-    except Exception as e:
-        print(f"[mlb] schedule fetch failed: {type(e).__name__}: {e}")
-        return []
-    live_games = [g for g in schedule if g.get("status") in _LIVE_STATES]
+    """Unified rows for every MLB game currently in progress. Empty if none.
+
+    Checks both the current UTC date and the previous one. MLB's schedule is
+    keyed by the US game date, but this poller can run on a UTC-clock host
+    (GitHub Actions runners are UTC) -- a 9pm Eastern game is already
+    "tomorrow" in UTC, so date.today() alone silently queries the wrong day
+    and reports 0 live games while real games are in progress. Checking
+    yesterday-UTC too covers that gap without needing a timezone database.
+    """
+    today_utc = dt.datetime.now(dt.timezone.utc).date()
+    candidate_dates = {today_utc.isoformat(), (today_utc - dt.timedelta(days=1)).isoformat()}
+
+    live_games = []
+    seen_pks = set()
+    for date_str in candidate_dates:
+        try:
+            schedule = statsapi_client.get_schedule(date_str)
+        except Exception as e:
+            print(f"[mlb] schedule fetch failed for {date_str}: {type(e).__name__}: {e}")
+            continue
+        for g in schedule:
+            if g.get("status") in _LIVE_STATES and g["game_pk"] not in seen_pks:
+                seen_pks.add(g["game_pk"])
+                live_games.append(g)
     if not live_games:
         return []
 
