@@ -8,11 +8,17 @@ name: Poll live signals
 
 on:
   schedule:
-    # Every 5 minutes -- GitHub's minimum cron granularity. Actual timing can
-    # slip a few minutes under GitHub's scheduling load; that's a known
-    # limitation of the free-tier cron approach, not a bug.
+    # EXPERIMENTAL/UNRELIABLE: confirmed via real run timestamps to land
+    # 150-250+ minutes apart in practice, not every 5 minutes -- GitHub's
+    # schedule trigger is a documented best-effort, low-priority queue with
+    # no timing guarantee, worse on lower-activity repos. Kept only as a
+    # slow backstop while repository_dispatch (below) is being verified as
+    # the real fix; not something to rely on alone.
     - cron: "*/5 * * * *"
   workflow_dispatch: {}   # lets you trigger a run manually from the Actions tab
+  repository_dispatch:
+    types: [poll_test]   # TEMPORARY event name while empirically verifying
+                         # dispatch-triggered timing -- see investigation log
 
 permissions:
   contents: write   # the poller commits new data/ files back to this repo
