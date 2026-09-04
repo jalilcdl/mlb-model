@@ -6,5 +6,17 @@
   "mlb:824424": {
     "pick_team": "DET",
     "last_notified_ts": 1788558632.3316038
+  },
+  "cfb:401864495": {
+    "pick_team": "Eastern Michigan Eagles",
+    "last_notified_ts": 1788564924.217012
+  },
+  "cfb:401858435": {
+    "pick_team": "Purdue Boilermakers",
+    "last_notified_ts": 1788564924.217012
+  },
+  "cfb:401866623": {
+    "pick_team": "Georgia State Panthers",
+    "last_notified_ts": 1788564924.217012
   }
 }
