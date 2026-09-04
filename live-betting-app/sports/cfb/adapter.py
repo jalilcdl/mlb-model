@@ -31,7 +31,8 @@ if str(_VENDOR_DIR) not in sys.path:
 
 from cfb_lib.live import cfbd_state
 from cfb_lib.live.live_odds import get_provider
-from cfb_lib.live.wp_model import win_probability
+from cfb_lib.live.wp_model import win_probability, cover_probability
+from cfb_lib.backtest.stats import implied_prob_from_american, remove_vig_two_way
 
 SPORT_KEY = "cfb"
 SPORT_LABEL = "College Football"
@@ -65,6 +66,35 @@ def _market_implied_margin(p_home: float) -> float:
     return NormalDist().inv_cdf(p) * 16.14
 
 
+def _spread_fields(gs, prior, spreads, home_name, away_name) -> dict:
+    """Model vs de-vigged market for the point spread, or all-None if no
+    spread is currently quoted for this game. Totals are deliberately NOT
+    computed here: wp_model.py models margin only (see its module docstring)
+    -- there is no total-points distribution anywhere in this model, and
+    faking one would be worse than not having it. If that changes, this is
+    where a total_fields companion would go."""
+    cands = [sp for sp in spreads
+             if _name_match(sp.home_abbr, home_name) and _name_match(sp.away_abbr, away_name)]
+    if not cands:
+        return {"spread_line": None, "spread_model_prob": None, "spread_market_prob": None,
+                "spread_edge": None, "spread_flagged": False, "spread_pick": None,
+                "spread_pick_odds_american": None}
+    sp = cands[0]
+    model_home_cover = cover_probability(gs, prior, sp.home_line)
+    market_home_cover, _ = remove_vig_two_way(
+        implied_prob_from_american(sp.home_american), implied_prob_from_american(sp.away_american))
+    edge = model_home_cover - market_home_cover
+    flagged = abs(edge) >= _THRESHOLD
+    return {
+        "spread_line": sp.home_line, "spread_model_prob": round(model_home_cover, 4),
+        "spread_market_prob": round(market_home_cover, 4), "spread_edge": round(edge, 4),
+        "spread_flagged": flagged,
+        "spread_pick": (home_name if edge > 0 else away_name) if flagged else None,
+        "spread_pick_odds_american": (
+            (sp.home_american if edge > 0 else sp.away_american) if flagged else None),
+    }
+
+
 def poll() -> list[dict]:
     """Unified rows for every CFB game currently in progress. Empty if none."""
     try:
@@ -81,6 +111,12 @@ def poll() -> list[dict]:
     except Exception as e:
         print(f"[cfb] live odds fetch failed: {type(e).__name__}: {e}")
         odds = []
+    spreads = []
+    if hasattr(provider, "list_spreads"):
+        try:
+            spreads = provider.list_spreads(is_live=True)
+        except Exception as e:
+            print(f"[cfb] live spread fetch failed: {type(e).__name__}: {e}")
 
     rows = []
     for g in live_games:
@@ -114,6 +150,8 @@ def poll() -> list[dict]:
         if gs.down:
             state_desc += f", {gs.down}&{gs.distance}"
 
+        spread_fields = _spread_fields(gs, prior, spreads, home_name, away_name)
+
         rows.append({
             "mode": "OBSERVE_ONLY",
             "sport": SPORT_KEY,
@@ -128,6 +166,14 @@ def poll() -> list[dict]:
             "pick_team": pick_team, "devig_method": _DEVIG_METHOD,
             "odds_source": pair.book or "sharpapi",
             "pick_odds_american": pick_odds_american,
+            **spread_fields,
+            # Deliberately not modeled -- see _spread_fields' docstring.
+            # Explicit None (not omitted) so the log schema stays uniform
+            # across sports; the dashboard shows this as "not modeled yet",
+            # never as a blank/failed lookup.
+            "total_line": None, "total_model_prob": None, "total_market_prob": None,
+            "total_edge": None, "total_flagged": False, "total_pick": None,
+            "total_pick_odds_american": None,
             # CFB-specific extras
             "period": gs.period, "clock": f"{gs.clock_seconds // 60}:{gs.clock_seconds % 60:02d}",
             "down": gs.down, "distance": gs.distance,

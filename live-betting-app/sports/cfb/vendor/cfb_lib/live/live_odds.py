@@ -80,10 +80,29 @@ class MoneylinePair:
                 + implied_prob_from_american(self.away_american))
 
 
+@dataclass(frozen=True)
+class SpreadPair:
+    """Point-spread two-way for one game. home_line/away_line are each side's
+    OWN signed line (e.g. home -2.5 favorite, away +2.5 -- verified directly:
+    each selection row already carries its own correctly-signed number)."""
+    event_id: str
+    home_abbr: str
+    away_abbr: str
+    home_line: float
+    away_line: float
+    home_american: int
+    away_american: int
+    book: str | None = None
+    is_live: bool = False
+
+
 class OddsProvider:
     name = "base"
 
     def list_moneylines(self, is_live: bool = True) -> list[MoneylinePair]:
+        raise NotImplementedError
+
+    def list_spreads(self, is_live: bool = True) -> list[SpreadPair]:
         raise NotImplementedError
 
 
@@ -131,6 +150,14 @@ class SharpAPIProvider(OddsProvider):
         data = self._get("/odds", {"league": self.league, "market": "moneyline",
                                    "is_live": str(is_live).lower()})
         return pair_moneylines(data.get("data", []))
+
+    def list_spreads(self, is_live: bool = True) -> list[SpreadPair]:
+        # market="spread" defaults to the 1st-half line, NOT full game --
+        # verified directly against the live API. The full-game market is
+        # market="point_spread".
+        data = self._get("/odds", {"league": self.league, "market": "point_spread",
+                                   "is_live": str(is_live).lower()})
+        return pair_spreads(data.get("data", []))
 
 
 def pair_moneylines(rows: list[dict]) -> list[MoneylinePair]:
@@ -187,6 +214,59 @@ def pair_moneylines(rows: list[dict]) -> list[MoneylinePair]:
             is_live=bool(home.get("is_live")),
             provider_home_novig=home.get("no_vig_probability"),
             provider_away_novig=away.get("no_vig_probability"),
+        ))
+    return out
+
+
+def pair_spreads(rows: list[dict]) -> list[SpreadPair]:
+    """Same regrouping as pair_moneylines, but the point_spread market
+    carries many ALTERNATE lines per event (a full ladder) -- only rows
+    flagged is_main_line=True are the actual current market number; verified
+    directly, every other row must be excluded, not picked arbitrarily."""
+    by_event: dict[str, dict] = {}
+    for r in rows:
+        if not r.get("is_main_line"):
+            continue
+        ev = str(r.get("event_id") or r.get("eventId") or "")
+        if not ev:
+            continue
+        side = r.get("selection_type") or r.get("side")
+        if side not in ("home", "away"):
+            continue
+        book = r.get("sportsbook") or r.get("book") or r.get("bookmaker")
+        slot = by_event.setdefault(ev, {})
+        slot.setdefault(book, {})[side] = r
+
+    out = []
+    for ev, books in by_event.items():
+        chosen = None
+        for pref in BOOK_PREFERENCE:
+            for book, sides in books.items():
+                if book and pref.lower() in str(book).lower() and len(sides) >= 2:
+                    chosen = (book, sides)
+                    break
+            if chosen:
+                break
+        if chosen is None:
+            for book, sides in books.items():
+                if len(sides) >= 2:
+                    chosen = (book, sides)
+                    break
+        if chosen is None:
+            continue
+        book, sides = chosen
+        home, away = sides.get("home"), sides.get("away")
+        if not home or not away:
+            continue
+        out.append(SpreadPair(
+            event_id=ev,
+            home_abbr=str(home.get("home_team") or ""),
+            away_abbr=str(away.get("away_team") or ""),
+            home_line=float(home["line"]), away_line=float(away["line"]),
+            home_american=int(home.get("odds_american") or home.get("price")),
+            away_american=int(away.get("odds_american") or away.get("price")),
+            book=book,
+            is_live=bool(home.get("is_live")),
         ))
     return out
 

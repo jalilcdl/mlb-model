@@ -32,6 +32,15 @@ Why this shape for THIS repo rather than a fitted play-by-play model:
 The possession term is an approximation of the standard expected-points curve
 and is the crudest piece here -- see EP_AT_OWN_GOAL / EP_PER_YARD.
 
+Only margin (moneyline/spread) is modeled here -- there is deliberately no
+total-points function. Margin and total are different linear combinations of
+each team's own score (home-away vs home+away); knowing the margin
+distribution says nothing about the total distribution, and this file has
+never derived one. A totals model would need its own empirically-measured
+variance (the way SIGMA_FULL_GAME was measured for margin, not guessed) --
+real modeling work, not an extension of what's here. Bolting a number on
+would be worse than not having one.
+
 Everything is observe-only. Nothing in this module places or recommends a bet.
 """
 from __future__ import annotations
@@ -109,6 +118,30 @@ def _phi(z: float) -> float:
     return 0.5 * (1.0 + math.erf(z / math.sqrt(2.0)))
 
 
+def _margin_distribution(state: GameState, pregame_margin: float,
+                         sigma_full: float) -> tuple[float, float] | None:
+    """(mu, sigma) of the in-progress margin ~ Normal(mu, sigma^2) model, or
+    None if the game's already decided (state.state == "post") -- callers
+    handle that case directly off state.margin instead. Shared by
+    win_probability/cover_probability so the two questions ("does home win"
+    vs "does home cover") always come from the exact same distribution, just
+    a different threshold -- not two models that could quietly drift apart.
+    """
+    if state.state == "post":
+        return None
+
+    remaining = state.seconds_remaining()
+    frac = 1.0 if state.state == "pre" else remaining / REGULATION_SECONDS
+
+    mu = state.margin + pregame_margin * frac
+    if state.home_has_ball is not None:
+        ep = expected_points(state.down, state.distance, state.yards_to_endzone)
+        mu += ep if state.home_has_ball else -ep
+
+    sigma = max(MIN_SIGMA, sigma_full * math.sqrt(max(frac, 0.0)))
+    return mu, sigma
+
+
 def win_probability(state: GameState, pregame_margin: float,
                     sigma_full: float = SIGMA_FULL_GAME) -> float:
     """P(home team wins), in [0, 1].
@@ -123,8 +156,6 @@ def win_probability(state: GameState, pregame_margin: float,
             return 0.0
         return 0.5
 
-    remaining = state.seconds_remaining()
-
     # Overtime: possession rules dominate and the Brownian model does not
     # describe them. Report the honest coin-flip-with-a-lead rather than
     # pretending to model it.
@@ -135,14 +166,35 @@ def win_probability(state: GameState, pregame_margin: float,
             return 0.15
         return 0.5
 
-    frac = remaining / REGULATION_SECONDS
-    if state.state == "pre":
-        frac = 1.0
-
-    mu = state.margin + pregame_margin * frac
-    if state.home_has_ball is not None:
-        ep = expected_points(state.down, state.distance, state.yards_to_endzone)
-        mu += ep if state.home_has_ball else -ep
-
-    sigma = max(MIN_SIGMA, sigma_full * math.sqrt(max(frac, 0.0)))
+    mu, sigma = _margin_distribution(state, pregame_margin, sigma_full)
     return _phi(mu / sigma)
+
+
+def cover_probability(state: GameState, pregame_margin: float, home_line: float,
+                      sigma_full: float = SIGMA_FULL_GAME) -> float:
+    """P(home team covers `home_line`, home's own signed line -- e.g. -7 for a
+    7-point favorite). Built on the EXACT same margin ~ Normal(mu, sigma^2)
+    distribution win_probability() uses (see _margin_distribution) -- just a
+    different threshold (-home_line instead of 0), not a separate model.
+    Home covers when its margin exceeds -home_line, so
+        P(cover) = Phi((mu - (-home_line)) / sigma) = Phi((mu + home_line) / sigma).
+    """
+    if state.state == "post":
+        if state.margin > -home_line:
+            return 1.0
+        if state.margin < -home_line:
+            return 0.0
+        return 0.5  # exact push
+
+    if state.period >= 5:
+        # Same coarse OT simplification win_probability() uses for the win
+        # question -- applied to the cover threshold instead of zero, for
+        # consistency, not new precision the model doesn't actually have.
+        if state.margin > -home_line:
+            return 0.85
+        if state.margin < -home_line:
+            return 0.15
+        return 0.5
+
+    mu, sigma = _margin_distribution(state, pregame_margin, sigma_full)
+    return _phi((mu + home_line) / sigma)
