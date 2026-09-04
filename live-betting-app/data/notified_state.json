@@ -2,5 +2,9 @@
   "mlb:823095": {
     "pick_team": "ATH",
     "last_notified_ts": 1788498208.6600049
+  },
+  "mlb:824424": {
+    "pick_team": "DET",
+    "last_notified_ts": 1788550692.9582963
   }
 }
