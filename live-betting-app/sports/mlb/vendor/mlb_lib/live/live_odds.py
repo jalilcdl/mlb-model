@@ -58,6 +58,39 @@ class LiveMoneyline:
     away_fair: float | None = None
 
 
+@dataclass
+class LiveSpread:
+    """Live run-line two-way for one game. `home_line`/`away_line` are each
+    side's OWN signed line (e.g. home -1.5 favorite, away +1.5 -- SharpAPI
+    gives each selection its own already-signed number, verified directly).
+    A team covers its line when its own margin exceeds -line."""
+    game_id: str
+    home_team: str
+    away_team: str
+    home_line: float
+    away_line: float
+    home_odds: int
+    away_odds: int
+    source: str
+    last_update: str | None = None
+    is_live: bool = False
+
+
+@dataclass
+class LiveTotal:
+    """Live game-total two-way for one game. One `line` shared by both sides
+    (verified directly: over/under main-line rows post the same number)."""
+    game_id: str
+    home_team: str
+    away_team: str
+    line: float
+    over_odds: int
+    under_odds: int
+    source: str
+    last_update: str | None = None
+    is_live: bool = False
+
+
 class LiveOddsProvider:
     """Interface. Implementations return a LiveMoneyline for a game id."""
 
@@ -145,6 +178,28 @@ class SharpAPIProvider(LiveOddsProvider):
             raise LookupError(f"No moneyline two-way returned for event {game_id}")
         return book[game_id]
 
+    def list_spreads(self, is_live=None, league="mlb", sport=None,
+                     sportsbook_priority=FREE_TIER_BOOKS, limit=200,
+                     event_id=None) -> dict:
+        """{event_id: LiveSpread}. MLB's run-line market is queried as
+        market="spread" but comes back tagged market_type "run_line" --
+        verified directly against the live API, not assumed."""
+        rows, _pag = self._get_odds(
+            league=league, sport=sport, market="spread", is_live=is_live,
+            limit=limit, event_id=event_id)
+        return _pair_spreads(rows, sportsbook_priority)
+
+    def list_totals(self, is_live=None, league="mlb", sport=None,
+                    sportsbook_priority=FREE_TIER_BOOKS, limit=200,
+                    event_id=None) -> dict:
+        """{event_id: LiveTotal}. The full-game total is market="total_runs" --
+        market="total" silently returns an unrelated 1st-3-innings team-total
+        prop instead; verified directly, not assumed."""
+        rows, _pag = self._get_odds(
+            league=league, sport=sport, market="total_runs", is_live=is_live,
+            limit=limit, event_id=event_id)
+        return _pair_totals(rows, sportsbook_priority)
+
 
 # Candidate keys a SharpAPI (or other) odds row might use for a NO-VIG / fair
 # probability. None appear on the free tier today; listed so the signal layer can
@@ -222,6 +277,81 @@ def _pair_moneylines(rows, sportsbook_priority=FREE_TIER_BOOKS) -> dict:
             is_live=bool(ref.get("is_live")),
             home_implied=h_impl, away_implied=a_impl,
             home_fair=h_fair, away_fair=a_fair,
+        )
+    return out
+
+
+def _pair_spreads(rows, sportsbook_priority=FREE_TIER_BOOKS) -> dict:
+    """Same event/book grouping as _pair_moneylines, but spread/total markets
+    carry many ALTERNATE lines per event (a full ladder, e.g. every half-run
+    total from 4.5 to 12.5 was observed on one real game) -- only the row(s)
+    flagged is_main_line=True are the actual current market number; every
+    other row is a different, non-current line and must be excluded, not
+    averaged or picked arbitrarily."""
+    events = {}
+    for r in rows:
+        if r.get("market_type") != "run_line" or not r.get("is_main_line"):
+            continue
+        events.setdefault(r["event_id"], []).append(r)
+
+    out = {}
+    for eid, ers in events.items():
+        by_book = {}
+        for r in ers:
+            by_book.setdefault(r.get("sportsbook"), {})[r.get("selection_type")] = r
+        order = list(sportsbook_priority) + [b for b in by_book
+                                             if b not in sportsbook_priority]
+        chosen = next((b for b in order
+                       if "home" in by_book.get(b, {}) and "away" in by_book.get(b, {})),
+                      None)
+        if chosen is None:
+            continue
+        home_row, away_row = by_book[chosen]["home"], by_book[chosen]["away"]
+        ref = ers[0]
+        home_abbr = (ref.get("home") or {}).get("abbreviation") or ref.get("home_team")
+        away_abbr = (ref.get("away") or {}).get("abbreviation") or ref.get("away_team")
+        out[eid] = LiveSpread(
+            game_id=eid, home_team=_norm(home_abbr), away_team=_norm(away_abbr),
+            home_line=float(home_row["line"]), away_line=float(away_row["line"]),
+            home_odds=int(home_row["odds_american"]), away_odds=int(away_row["odds_american"]),
+            source=f"sharpapi:{chosen}", last_update=ref.get("timestamp"),
+            is_live=bool(ref.get("is_live")),
+        )
+    return out
+
+
+def _pair_totals(rows, sportsbook_priority=FREE_TIER_BOOKS) -> dict:
+    """Same is_main_line filtering as _pair_spreads (see its docstring) --
+    verified directly: over/under main-line rows post the SAME line number,
+    so pairing them is safe once alternates are excluded."""
+    events = {}
+    for r in rows:
+        if r.get("market_type") != "total_runs" or not r.get("is_main_line"):
+            continue
+        events.setdefault(r["event_id"], []).append(r)
+
+    out = {}
+    for eid, ers in events.items():
+        by_book = {}
+        for r in ers:
+            by_book.setdefault(r.get("sportsbook"), {})[r.get("selection_type")] = r
+        order = list(sportsbook_priority) + [b for b in by_book
+                                             if b not in sportsbook_priority]
+        chosen = next((b for b in order
+                       if "over" in by_book.get(b, {}) and "under" in by_book.get(b, {})),
+                      None)
+        if chosen is None:
+            continue
+        over_row, under_row = by_book[chosen]["over"], by_book[chosen]["under"]
+        ref = ers[0]
+        home_abbr = (ref.get("home") or {}).get("abbreviation") or ref.get("home_team")
+        away_abbr = (ref.get("away") or {}).get("abbreviation") or ref.get("away_team")
+        out[eid] = LiveTotal(
+            game_id=eid, home_team=_norm(home_abbr), away_team=_norm(away_abbr),
+            line=float(over_row["line"]),
+            over_odds=int(over_row["odds_american"]), under_odds=int(under_row["odds_american"]),
+            source=f"sharpapi:{chosen}", last_update=ref.get("timestamp"),
+            is_live=bool(ref.get("is_live")),
         )
     return out
 

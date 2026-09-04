@@ -155,15 +155,30 @@ def is_game_over(state: GameState):
     return None
 
 
-def win_probability(state: GameState, home_team=None, away_team=None,
-                    ratings=None, n_sims=20000, seed=None):
-    """P(home team wins) from the current state. Team codes are optional; without
-    them (or for teams missing from the ratings) both sides use league-average
-    run rates, i.e. a pure base-out-score-inning estimate with no team prior."""
-    decided = is_game_over(state)
-    if decided is not None:
-        return decided
+# Safety cap on simulated extra innings (i.e. up to inning 9+MAX_EXTRA_INNINGS).
+# Real MLB games essentially never approach this -- the longest in recorded
+# history was 26 innings -- so this bound almost never binds; it exists only
+# to guarantee the simulation loop terminates. Any simulation still tied after
+# the cap falls back to the flat EXTRA_INNING_HOME_WIN_PROB coin, exactly the
+# shortcut the rest of this function no longer needs.
+MAX_EXTRA_INNINGS = 20
 
+
+def simulate_remainder(state: GameState, home_team=None, away_team=None,
+                       ratings=None, n_sims=20000, seed=None):
+    """Simulate the rest of the game from `state`, returning (h, a): each
+    array is one simulated FINAL score per trial (n_sims of them). This is
+    the shared core win_probability/cover_probability/over_probability all
+    build on -- margin (h-a) and total (h+a) are real per-trial simulated
+    quantities, not a derived approximation.
+
+    Extra innings are genuinely simulated (same run-rate machinery as
+    regulation, repeated a half-inning at a time only for the subset of
+    trials still tied), not resolved by a flat coin-flip -- that shortcut
+    would silently understate total-runs for any trial that ties after 9,
+    which matters for over/under even though it barely matters for margin
+    (a modeled tie contributes margin 0, which doesn't cover either side of a
+    real line anyway)."""
     rng = np.random.default_rng(seed)
     home_rate, away_rate = run_rates(home_team, away_team, ratings)
 
@@ -183,7 +198,7 @@ def win_probability(state: GameState, home_team=None, away_team=None,
             runs = np.where(h > a, 0, runs)
         h += runs
 
-    # 2) Play the remaining full half-innings.
+    # 2) Play the remaining full half-innings through the bottom of the 9th.
     for inn, half in _future_halves(state.inning, state.half):
         if half == "top":
             a += _draw_runs(away_rate, n_sims, rng)
@@ -193,9 +208,70 @@ def win_probability(state: GameState, home_team=None, away_team=None,
                 runs = np.where(h > a, 0, runs)
             h += runs
 
-    # 3) Resolve. Ties after regulation go to a flat home-field extras constant.
-    home_win = h > a
-    tie = h == a
-    extras = rng.random(n_sims) < config.EXTRA_INNING_HOME_WIN_PROB
-    home_win = np.where(tie, extras, home_win)
-    return float(home_win.mean())
+    # 3) Real extra innings for whatever trials are still tied -- only the
+    #    tied subset is touched each round, so a trial decided in the 10th
+    #    doesn't keep accumulating runs in later rounds.
+    for _ in range(MAX_EXTRA_INNINGS):
+        tied = h == a
+        if not np.any(tied):
+            break
+        away_runs = _draw_runs(away_rate, n_sims, rng)
+        a[tied] += away_runs[tied]
+        home_leads = h > a  # after the top half just played
+        home_runs = _draw_runs(home_rate, n_sims, rng)
+        home_runs = np.where(home_leads, 0, home_runs)  # walk-off: skip if already ahead
+        h[tied] += home_runs[tied]
+
+    # 4) Whatever's still tied after the cap (should essentially never happen
+    #    in practice -- see MAX_EXTRA_INNINGS) falls back to the flat constant,
+    #    same number the old shortcut used for every tie, now used for none.
+    still_tied = h == a
+    if np.any(still_tied):
+        n_left = int(still_tied.sum())
+        home_wins_tiebreak = rng.random(n_left) < config.EXTRA_INNING_HOME_WIN_PROB
+        # Encode the coin-flip as a nominal 1-0 margin so h>a / totals stay
+        # well-defined for this vanishingly rare leftover, rather than a
+        # permanent tie that would corrupt margin/total math downstream.
+        h[still_tied] += home_wins_tiebreak.astype(np.int64)
+        a[still_tied] += (~home_wins_tiebreak).astype(np.int64)
+
+    return h, a
+
+
+def win_probability(state: GameState, home_team=None, away_team=None,
+                    ratings=None, n_sims=20000, seed=None):
+    """P(home team wins) from the current state. Team codes are optional; without
+    them (or for teams missing from the ratings) both sides use league-average
+    run rates, i.e. a pure base-out-score-inning estimate with no team prior."""
+    decided = is_game_over(state)
+    if decided is not None:
+        return decided
+    h, a = simulate_remainder(state, home_team, away_team, ratings, n_sims, seed)
+    return float((h > a).mean())
+
+
+def cover_probability(state: GameState, home_line: float, home_team=None,
+                      away_team=None, ratings=None, n_sims=20000, seed=None):
+    """P(home team covers `home_line`), home team's OWN signed line (e.g. -1.5
+    favorite, +1.5 underdog -- each side's odds row already carries its own
+    correctly-signed line; pass that straight through, don't re-derive a sign).
+    Home covers when its own margin exceeds -home_line."""
+    decided = is_game_over(state)
+    if decided is not None:
+        margin = state.home_score - state.away_score
+        return 1.0 if margin > -home_line else 0.0
+    h, a = simulate_remainder(state, home_team, away_team, ratings, n_sims, seed)
+    margin = h - a
+    return float((margin > -home_line).mean())
+
+
+def over_probability(state: GameState, total_line: float, home_team=None,
+                     away_team=None, ratings=None, n_sims=20000, seed=None):
+    """P(total runs > total_line)."""
+    decided = is_game_over(state)
+    if decided is not None:
+        total = state.home_score + state.away_score
+        return 1.0 if total > total_line else 0.0
+    h, a = simulate_remainder(state, home_team, away_team, ratings, n_sims, seed)
+    total = h + a
+    return float((total > total_line).mean())
