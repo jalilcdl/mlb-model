@@ -12,6 +12,11 @@ __pycache__/
 venv/
 .venv/
 
+# Backtest output -- regenerable by re-running strategy/backtest.py, not
+# meant to be versioned (charts/CSVs change every run as the log grows).
+strategy/reports/*
+!strategy/reports/.gitkeep
+
 # OS noise
 .DS_Store
 Thumbs.db

@@ -1,12 +1,14 @@
 # Live Betting Signals
 
 Unified, always-on dashboard for the MLB and CFB live in-game signal
-prototypes (mlb-model, cfb-model). **OBSERVE-ONLY** -- this detects and logs
-disagreements between an in-game win-probability model and the de-vigged live
-market. It never places a bet, sizes a stake, or recommends action, and there
-is no order-placement code anywhere in this repo. That's a hard rule inherited
-from both source repos, not a preference, and it must stay true for any sport
-added here in the future.
+prototypes (mlb-model, cfb-model), plus a backtest-first strategy layer
+(`strategy/`, see below) that turns a logged disagreement into an advisory
+stake suggestion. **ADVISORY ONLY** -- it detects, logs, and (once validated)
+sizes a suggested stake; it never places a bet, moves money, or touches a
+sportsbook/account, and there is no order-placement code anywhere in this
+repo. That's a hard rule inherited from both source repos, not a preference,
+and it must stay true for any sport added here in the future. Jalil places
+every bet himself.
 
 ## Architecture
 
@@ -42,6 +44,32 @@ branch GitHub Actions' cron requires the workflow file to live on. They're
 easy to filter out (`git log --invert-grep --author=live-signal-poller`) or
 ignore, but if that ends up being annoying in practice, moving the data commits
 to a dedicated branch is a reasonable follow-up -- just ask.
+
+## Strategy layer (`strategy/`) -- backtest first, live tab later
+
+Turns a flagged signal into a sized stake suggestion, fractional Kelly with a
+hard cap. Deliberately decoupled from the poller (`core/poller.py` imports
+nothing from `strategy/` -- checked, not assumed) so a bug here can't break
+signal logging or Telegram.
+
+- `strategy/config.py` -- the tunable knobs (Kelly fraction, bet cap, min
+  edge to size, sanity ceiling above which a huge edge gets flagged for
+  manual review instead of auto-sized, default bankroll placeholder).
+- `strategy/sizing.py` -- pure Kelly math, sizes off the REAL quoted price
+  (`pick_odds_american`), not the de-vigged fair probability used to detect
+  the edge in the first place.
+- `strategy/outcomes.py` -- backtest-only: resolves a logged game to its
+  final result via each sport's free API (MLB Stats API; CFBD's plain
+  `/games?id=`, not the Patreon-gated live endpoints).
+- `strategy/backtest.py` -- run `python -m strategy.backtest` (from
+  `live-betting-app/`, needs `requirements-strategy.txt` for matplotlib).
+  Reports hit rate, a calibration table (predicted vs realized win rate by
+  probability band), and a simulated bankroll curve, with an explicit
+  small-sample warning below 30 resolved bets. Output goes to
+  `strategy/reports/` (gitignored -- regenerate anytime).
+
+Not yet wired into `app.py` as a tab -- that's an explicit later step, only
+once real backtest results justify trusting it live.
 
 ## Adding a sport (e.g. NFL later)
 

@@ -1,0 +1,4 @@
+# Extra deps for the backtest harness (strategy/backtest.py), run locally --
+# not installed by the poller (requirements-poller.txt) or Streamlit Cloud
+# (requirements.txt already has pandas; matplotlib is backtest-only).
+matplotlib

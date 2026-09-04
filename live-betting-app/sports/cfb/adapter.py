@@ -103,8 +103,12 @@ def poll() -> list[dict]:
         gap = model_home - mkt_home
         flagged = abs(gap) >= _THRESHOLD
         pick_team = None
+        pick_odds_american = None
         if flagged:
             pick_team = home_name if gap > 0 else away_name
+            # The actual quoted price for the picked side, for Kelly sizing
+            # (needs the real bettable price, not the de-vigged fair one).
+            pick_odds_american = pair.home_american if gap > 0 else pair.away_american
 
         state_desc = f"Q{gs.period} {gs.clock_seconds // 60}:{gs.clock_seconds % 60:02d}"
         if gs.down:
@@ -123,6 +127,7 @@ def poll() -> list[dict]:
             "edge_home": round(gap, 4), "edge": round(abs(gap), 4), "flagged": flagged,
             "pick_team": pick_team, "devig_method": _DEVIG_METHOD,
             "odds_source": pair.book or "sharpapi",
+            "pick_odds_american": pick_odds_american,
             # CFB-specific extras
             "period": gs.period, "clock": f"{gs.clock_seconds // 60}:{gs.clock_seconds % 60:02d}",
             "down": gs.down, "distance": gs.distance,

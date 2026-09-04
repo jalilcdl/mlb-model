@@ -75,6 +75,12 @@ def _to_unified_row(game, meta, state, ml, signal) -> dict:
         "edge_home": signal.edge_home, "edge": signal.edge, "flagged": signal.flagged,
         "pick_team": signal.pick_team, "devig_method": signal.devig_method,
         "odds_source": ml.source,
+        # The actual quoted price for pick_side, for Kelly sizing (needs the
+        # real bettable price, not the de-vigged fair one above). None when
+        # nothing's flagged -- there's no "pick" to price.
+        "pick_odds_american": (
+            (ml.home_odds if signal.pick_side == "home" else ml.away_odds)
+            if signal.pick_side else None),
         # MLB-specific extras, preserved for the dashboard's detail view
         "inning": state.inning, "half": state.half, "outs": state.outs,
         "bases": list(state.bases), "batter": meta.get("batter"), "pitcher": meta.get("pitcher"),
