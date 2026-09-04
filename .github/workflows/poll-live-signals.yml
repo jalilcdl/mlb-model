@@ -42,6 +42,7 @@ jobs:
       - name: Run one poll cycle (OBSERVE-ONLY)
         env:
           SHARPAPI_API_KEY: ${{ secrets.SHARPAPI_API_KEY }}
+          CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python -m core.poller
