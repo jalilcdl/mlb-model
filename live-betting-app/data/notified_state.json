@@ -77,7 +77,7 @@
   },
   "mlb:823577": {
     "pick_team": "SF",
-    "last_notified_ts": 1788640529.2827308
+    "last_notified_ts": 1788646611.545477
   },
   "cfb:401856779": {
     "pick_team": "Iowa State Cyclones",
@@ -93,30 +93,70 @@
   },
   "cfb:401856666": {
     "pick_team": "Tennessee Volunteers",
-    "last_notified_ts": 1788640529.2827308
+    "last_notified_ts": 1788646611.545477
   },
   "cfb:401856667": {
     "pick_team": "Texas Longhorns",
-    "last_notified_ts": 1788640529.2827308
+    "last_notified_ts": 1788646611.545477
   },
   "cfb:401858433": {
     "pick_team": "Boise State Broncos",
-    "last_notified_ts": 1788640529.2827308
+    "last_notified_ts": 1788646611.545477
   },
   "cfb:401858434": {
     "pick_team": "Penn State Nittany Lions",
-    "last_notified_ts": 1788640529.2827308
+    "last_notified_ts": 1788646611.545477
   },
   "cfb:401862700": {
     "pick_team": "UTSA Roadrunners",
-    "last_notified_ts": 1788640529.2827308
+    "last_notified_ts": 1788646611.545477
   },
   "cfb:401864499": {
     "pick_team": "North Dakota State Bison",
-    "last_notified_ts": 1788640529.2827308
+    "last_notified_ts": 1788646611.545477
   },
   "cfb:401866627": {
     "pick_team": "App State Mountaineers",
-    "last_notified_ts": 1788640529.2827308
+    "last_notified_ts": 1788646611.545477
+  },
+  "mlb:823419": {
+    "pick_team": "ATL",
+    "last_notified_ts": 1788646611.545477
+  },
+  "cfb:401856636": {
+    "pick_team": "Baylor Bears",
+    "last_notified_ts": 1788646611.545477
+  },
+  "cfb:401856777": {
+    "pick_team": "Cincinnati Bearcats",
+    "last_notified_ts": 1788646611.545477
+  },
+  "cfb:401862694": {
+    "pick_team": "Charlotte 49ers",
+    "last_notified_ts": 1788646611.545477
+  },
+  "cfb:401862696": {
+    "pick_team": "Navy Midshipmen",
+    "last_notified_ts": 1788646611.545477
+  },
+  "cfb:401856772": {
+    "pick_team": "Tulsa Golden Hurricane",
+    "last_notified_ts": 1788646611.545477
+  },
+  "cfb:401856635": {
+    "pick_team": "Arkansas Razorbacks",
+    "last_notified_ts": 1788646611.545477
+  },
+  "cfb:401858426": {
+    "pick_team": "Iowa Hawkeyes",
+    "last_notified_ts": 1788646611.545477
+  },
+  "cfb:401868356": {
+    "pick_team": "Southern Miss Golden Eagles",
+    "last_notified_ts": 1788646611.545477
+  },
+  "cfb:401867973": {
+    "pick_team": "Norfolk State Spartans",
+    "last_notified_ts": 1788646611.545477
   }
 }
