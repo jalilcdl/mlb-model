@@ -8,15 +8,47 @@
     "last_notified_ts": 1788558632.3316038
   },
   "cfb:401864495": {
-    "pick_team": "Eastern Michigan Eagles",
-    "last_notified_ts": 1788564924.217012
+    "pick_team": "San Jos\u00e9 State Spartans",
+    "last_notified_ts": 1788571413.9042127
   },
   "cfb:401858435": {
     "pick_team": "Purdue Boilermakers",
-    "last_notified_ts": 1788564924.217012
+    "last_notified_ts": 1788571413.9042127
   },
   "cfb:401866623": {
     "pick_team": "Georgia State Panthers",
-    "last_notified_ts": 1788564924.217012
+    "last_notified_ts": 1788571413.9042127
+  },
+  "mlb:824387": {
+    "pick_team": "DET",
+    "last_notified_ts": 1788571413.9042127
+  },
+  "mlb:824797": {
+    "pick_team": "BOS",
+    "last_notified_ts": 1788571413.9042127
+  },
+  "mlb:824067": {
+    "pick_team": "TOR",
+    "last_notified_ts": 1788571413.9042127
+  },
+  "cfb:401856664": {
+    "pick_team": "Oklahoma Sooners",
+    "last_notified_ts": 1788571413.9042127
+  },
+  "cfb:401856769": {
+    "pick_team": "Kansas Jayhawks",
+    "last_notified_ts": 1788571413.9042127
+  },
+  "cfb:401858429": {
+    "pick_team": "Michigan State Spartans",
+    "last_notified_ts": 1788571413.9042127
+  },
+  "cfb:401858206": {
+    "pick_team": "Miami Hurricanes",
+    "last_notified_ts": 1788571413.9042127
+  },
+  "cfb:401858436": {
+    "pick_team": "USC Trojans",
+    "last_notified_ts": 1788571413.9042127
   }
 }
