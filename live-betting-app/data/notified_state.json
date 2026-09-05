@@ -50,5 +50,29 @@
   "cfb:401858436": {
     "pick_team": "USC Trojans",
     "last_notified_ts": 1788571413.9042127
+  },
+  "cfb:401856634": {
+    "pick_team": "East Carolina Pirates",
+    "last_notified_ts": 1788624847.1182446
+  },
+  "cfb:401856778": {
+    "pick_team": "Oregon State Beavers",
+    "last_notified_ts": 1788624847.1182446
+  },
+  "cfb:401856780": {
+    "pick_team": "West Virginia Mountaineers",
+    "last_notified_ts": 1788624847.1182446
+  },
+  "cfb:401858430": {
+    "pick_team": "Ohio Bobcats",
+    "last_notified_ts": 1788624847.1182446
+  },
+  "cfb:401861962": {
+    "pick_team": "UConn Huskies",
+    "last_notified_ts": 1788624847.1182446
+  },
+  "cfb:401866410": {
+    "pick_team": "Tarleton State Texans",
+    "last_notified_ts": 1788624847.1182446
   }
 }
