@@ -74,5 +74,49 @@
   "cfb:401866410": {
     "pick_team": "Tarleton State Texans",
     "last_notified_ts": 1788624847.1182446
+  },
+  "mlb:823577": {
+    "pick_team": "SF",
+    "last_notified_ts": 1788640529.2827308
+  },
+  "cfb:401856779": {
+    "pick_team": "Iowa State Cyclones",
+    "last_notified_ts": 1788640529.2827308
+  },
+  "cfb:401862698": {
+    "pick_team": "Temple Owls",
+    "last_notified_ts": 1788640529.2827308
+  },
+  "cfb:401856658": {
+    "pick_team": "Georgia Bulldogs",
+    "last_notified_ts": 1788640529.2827308
+  },
+  "cfb:401856666": {
+    "pick_team": "Tennessee Volunteers",
+    "last_notified_ts": 1788640529.2827308
+  },
+  "cfb:401856667": {
+    "pick_team": "Texas Longhorns",
+    "last_notified_ts": 1788640529.2827308
+  },
+  "cfb:401858433": {
+    "pick_team": "Boise State Broncos",
+    "last_notified_ts": 1788640529.2827308
+  },
+  "cfb:401858434": {
+    "pick_team": "Penn State Nittany Lions",
+    "last_notified_ts": 1788640529.2827308
+  },
+  "cfb:401862700": {
+    "pick_team": "UTSA Roadrunners",
+    "last_notified_ts": 1788640529.2827308
+  },
+  "cfb:401864499": {
+    "pick_team": "North Dakota State Bison",
+    "last_notified_ts": 1788640529.2827308
+  },
+  "cfb:401866627": {
+    "pick_team": "App State Mountaineers",
+    "last_notified_ts": 1788640529.2827308
   }
 }
