@@ -158,5 +158,13 @@
   "cfb:401867973": {
     "pick_team": "Norfolk State Spartans",
     "last_notified_ts": 1788646611.545477
+  },
+  "mlb:824145": {
+    "pick_team": "ARI",
+    "last_notified_ts": 1788652832.4545717
+  },
+  "mlb:823257": {
+    "pick_team": "NYY",
+    "last_notified_ts": 1788652832.4545717
   }
 }
