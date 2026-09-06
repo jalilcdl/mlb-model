@@ -166,5 +166,45 @@
   "mlb:823257": {
     "pick_team": "NYY",
     "last_notified_ts": 1788652832.4545717
+  },
+  "cfb:401867866": {
+    "pick_team": "Middle Tennessee Blue Raiders",
+    "last_notified_ts": 1788668866.7015026
+  },
+  "cfb:401856660": {
+    "pick_team": "LSU Tigers",
+    "last_notified_ts": 1788668866.7015026
+  },
+  "cfb:401856773": {
+    "pick_team": "Arizona Wildcats",
+    "last_notified_ts": 1788668866.7015026
+  },
+  "cfb:401860879": {
+    "pick_team": "San Diego State Aztecs",
+    "last_notified_ts": 1788668866.7015026
+  },
+  "cfb:401856774": {
+    "pick_team": "Arizona State Sun Devils",
+    "last_notified_ts": 1788668866.7015026
+  },
+  "cfb:401864497": {
+    "pick_team": "UNLV Rebels",
+    "last_notified_ts": 1788668866.7015026
+  },
+  "cfb:401864498": {
+    "pick_team": "New Mexico Lobos",
+    "last_notified_ts": 1788668866.7015026
+  },
+  "cfb:401866411": {
+    "pick_team": "Sacramento State Hornets",
+    "last_notified_ts": 1788668866.7015026
+  },
+  "cfb:401858210": {
+    "pick_team": "UCLA Bruins",
+    "last_notified_ts": 1788668866.7015026
+  },
+  "cfb:401864432": {
+    "pick_team": "Nevada Wolf Pack",
+    "last_notified_ts": 1788668866.7015026
   }
 }
