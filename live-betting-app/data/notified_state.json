@@ -210,5 +210,9 @@
   "mlb:823336": {
     "pick_team": "LAA",
     "last_notified_ts": 1788723413.0796807
+  },
+  "cfb:401858438": {
+    "pick_team": "Wisconsin Badgers",
+    "last_notified_ts": 1788743181.178612
   }
 }
