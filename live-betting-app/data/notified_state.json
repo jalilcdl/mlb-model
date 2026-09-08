@@ -214,5 +214,9 @@
   "cfb:401858438": {
     "pick_team": "Wisconsin Badgers",
     "last_notified_ts": 1788743181.178612
+  },
+  "mlb:823500": {
+    "pick_team": "COL",
+    "last_notified_ts": 1788910634.7300029
   }
 }
