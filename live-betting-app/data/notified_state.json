@@ -218,5 +218,9 @@
   "mlb:823500": {
     "pick_team": "COL",
     "last_notified_ts": 1788910634.7300029
+  },
+  "mlb:824549": {
+    "pick_team": "PIT",
+    "last_notified_ts": 1789003550.531903
   }
 }
