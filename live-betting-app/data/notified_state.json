@@ -261,38 +261,78 @@
   },
   "cfb:401856781": {
     "pick_team": "Kansas State Wildcats",
-    "last_notified_ts": 1789230743.3680754
+    "last_notified_ts": 1789238663.0219154
   },
   "cfb:401858218": {
     "pick_team": "North Carolina Tar Heels",
-    "last_notified_ts": 1789230743.3680754
+    "last_notified_ts": 1789238663.0219154
   },
   "cfb:401858224": {
     "pick_team": "Wake Forest Demon Deacons",
-    "last_notified_ts": 1789230743.3680754
+    "last_notified_ts": 1789238663.0219154
   },
   "cfb:401858439": {
     "pick_team": "Indiana Hoosiers",
-    "last_notified_ts": 1789230743.3680754
+    "last_notified_ts": 1789238663.0219154
   },
   "cfb:401858442": {
     "pick_team": "Penn State Nittany Lions",
-    "last_notified_ts": 1789230743.3680754
+    "last_notified_ts": 1789238663.0219154
   },
   "cfb:401862702": {
-    "pick_team": "South Florida Bulls",
-    "last_notified_ts": 1789230743.3680754
+    "pick_team": "Army Black Knights",
+    "last_notified_ts": 1789238663.0219154
   },
   "cfb:401866416": {
     "pick_team": "Kent State Golden Flashes",
-    "last_notified_ts": 1789230743.3680754
+    "last_notified_ts": 1789238663.0219154
   },
   "cfb:401867929": {
     "pick_team": "James Madison Dukes",
-    "last_notified_ts": 1789230743.3680754
+    "last_notified_ts": 1789238663.0219154
   },
   "cfb:401868187": {
     "pick_team": "Liberty Flames",
     "last_notified_ts": 1789230743.3680754
+  },
+  "cfb:401856679": {
+    "pick_team": "Michigan Wolverines",
+    "last_notified_ts": 1789238663.0219154
+  },
+  "cfb:401856683": {
+    "pick_team": "Texas A&M Aggies",
+    "last_notified_ts": 1789238663.0219154
+  },
+  "cfb:401856782": {
+    "pick_team": "Oklahoma State Cowboys",
+    "last_notified_ts": 1789238663.0219154
+  },
+  "cfb:401858221": {
+    "pick_team": "Virginia Tech Hokies",
+    "last_notified_ts": 1789238663.0219154
+  },
+  "cfb:401864571": {
+    "pick_team": "App State Mountaineers",
+    "last_notified_ts": 1789238663.0219154
+  },
+  "cfb:401856673": {
+    "pick_team": "Georgia Bulldogs",
+    "last_notified_ts": 1789238663.0219154
+  },
+  "cfb:401856791": {
+    "pick_team": "West Virginia Mountaineers",
+    "last_notified_ts": 1789238663.0219154
+  },
+  "cfb:401866415": {
+    "pick_team": "Colgate Raiders",
+    "last_notified_ts": 1789238663.0219154
+  },
+  "cfb:401866417": {
+    "pick_team": "Miami (OH) RedHawks",
+    "last_notified_ts": 1789238663.0219154
+  },
+  "cfb:401866413": {
+    "pick_team": "Ball State Cardinals",
+    "last_notified_ts": 1789238663.0219154
   }
 }
