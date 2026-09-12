@@ -226,5 +226,37 @@
   "mlb:824631": {
     "pick_team": "PIT",
     "last_notified_ts": 1789151212.4452763
+  },
+  "mlb:823498": {
+    "pick_team": "NYY",
+    "last_notified_ts": 1789175789.6390371
+  },
+  "mlb:822930": {
+    "pick_team": "HOU",
+    "last_notified_ts": 1789175789.6390371
+  },
+  "mlb:823817": {
+    "pick_team": "MIA",
+    "last_notified_ts": 1789175789.6390371
+  },
+  "cfb:401858215": {
+    "pick_team": "Louisville Cardinals",
+    "last_notified_ts": 1789175789.6390371
+  },
+  "cfb:401858220": {
+    "pick_team": "Virginia Cavaliers",
+    "last_notified_ts": 1789175789.6390371
+  },
+  "cfb:401858222": {
+    "pick_team": "NC State Wolfpack",
+    "last_notified_ts": 1789175789.6390371
+  },
+  "cfb:401858214": {
+    "pick_team": "Boston College Eagles",
+    "last_notified_ts": 1789175789.6390371
+  },
+  "cfb:401856678": {
+    "pick_team": "Missouri Tigers",
+    "last_notified_ts": 1789175789.6390371
   }
 }
