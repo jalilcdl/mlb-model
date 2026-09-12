@@ -258,5 +258,41 @@
   "cfb:401856678": {
     "pick_team": "Missouri Tigers",
     "last_notified_ts": 1789175789.6390371
+  },
+  "cfb:401856781": {
+    "pick_team": "Kansas State Wildcats",
+    "last_notified_ts": 1789230743.3680754
+  },
+  "cfb:401858218": {
+    "pick_team": "North Carolina Tar Heels",
+    "last_notified_ts": 1789230743.3680754
+  },
+  "cfb:401858224": {
+    "pick_team": "Wake Forest Demon Deacons",
+    "last_notified_ts": 1789230743.3680754
+  },
+  "cfb:401858439": {
+    "pick_team": "Indiana Hoosiers",
+    "last_notified_ts": 1789230743.3680754
+  },
+  "cfb:401858442": {
+    "pick_team": "Penn State Nittany Lions",
+    "last_notified_ts": 1789230743.3680754
+  },
+  "cfb:401862702": {
+    "pick_team": "South Florida Bulls",
+    "last_notified_ts": 1789230743.3680754
+  },
+  "cfb:401866416": {
+    "pick_team": "Kent State Golden Flashes",
+    "last_notified_ts": 1789230743.3680754
+  },
+  "cfb:401867929": {
+    "pick_team": "James Madison Dukes",
+    "last_notified_ts": 1789230743.3680754
+  },
+  "cfb:401868187": {
+    "pick_team": "Liberty Flames",
+    "last_notified_ts": 1789230743.3680754
   }
 }
