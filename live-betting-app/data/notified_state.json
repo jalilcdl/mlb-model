@@ -334,5 +334,9 @@
   "cfb:401866413": {
     "pick_team": "Ball State Cardinals",
     "last_notified_ts": 1789238663.0219154
+  },
+  "mlb:825034": {
+    "pick_team": "MIA",
+    "last_notified_ts": 1789436683.2430284
   }
 }
