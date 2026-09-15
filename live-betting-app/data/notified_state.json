@@ -338,5 +338,9 @@
   "mlb:825034": {
     "pick_team": "MIA",
     "last_notified_ts": 1789436683.2430284
+  },
+  "mlb:824466": {
+    "pick_team": "CIN",
+    "last_notified_ts": 1789513039.4886155
   }
 }
