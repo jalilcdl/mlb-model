@@ -342,5 +342,9 @@
   "mlb:824466": {
     "pick_team": "CIN",
     "last_notified_ts": 1789513039.4886155
+  },
+  "mlb:823332": {
+    "pick_team": "MIL",
+    "last_notified_ts": 1789605080.1082273
   }
 }
