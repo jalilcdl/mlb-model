@@ -350,5 +350,25 @@
   "mlb:823334": {
     "pick_team": "MIL",
     "last_notified_ts": 1789671497.5022862
+  },
+  "mlb:824790": {
+    "pick_team": "BAL",
+    "last_notified_ts": 1789776436.9898872
+  },
+  "mlb:824383": {
+    "pick_team": "ATH",
+    "last_notified_ts": 1789776436.9898872
+  },
+  "mlb:822923": {
+    "pick_team": "BOS",
+    "last_notified_ts": 1789776436.9898872
+  },
+  "mlb:823572": {
+    "pick_team": "PHI",
+    "last_notified_ts": 1789776436.9898872
+  },
+  "cfb:401858226": {
+    "pick_team": "Miami Hurricanes",
+    "last_notified_ts": 1789776436.9898872
   }
 }
