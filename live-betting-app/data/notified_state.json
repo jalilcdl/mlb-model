@@ -370,5 +370,49 @@
   "cfb:401858226": {
     "pick_team": "Miami Hurricanes",
     "last_notified_ts": 1789776436.9898872
+  },
+  "cfb:401869940": {
+    "pick_team": "Coastal Carolina Chanticleers",
+    "last_notified_ts": 1789835125.8830216
+  },
+  "cfb:401856686": {
+    "pick_team": "Georgia Bulldogs",
+    "last_notified_ts": 1789835125.8830216
+  },
+  "cfb:401856792": {
+    "pick_team": "Tulane Green Wave",
+    "last_notified_ts": 1789835125.8830216
+  },
+  "cfb:401856798": {
+    "pick_team": "Bowling Green Falcons",
+    "last_notified_ts": 1789835125.8830216
+  },
+  "cfb:401856812": {
+    "pick_team": "Arizona State Sun Devils",
+    "last_notified_ts": 1789835125.8830216
+  },
+  "cfb:401858228": {
+    "pick_team": "Georgia Tech Yellow Jackets",
+    "last_notified_ts": 1789835125.8830216
+  },
+  "cfb:401858229": {
+    "pick_team": "North Carolina Tar Heels",
+    "last_notified_ts": 1789835125.8830216
+  },
+  "cfb:401858451": {
+    "pick_team": "Minnesota Golden Gophers",
+    "last_notified_ts": 1789835125.8830216
+  },
+  "cfb:401858454": {
+    "pick_team": "Ohio State Buckeyes",
+    "last_notified_ts": 1789835125.8830216
+  },
+  "cfb:401858456": {
+    "pick_team": "Penn State Nittany Lions",
+    "last_notified_ts": 1789835125.8830216
+  },
+  "cfb:401860889": {
+    "pick_team": "Texas State Bobcats",
+    "last_notified_ts": 1789835125.8830216
   }
 }
