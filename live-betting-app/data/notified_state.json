@@ -397,7 +397,7 @@
   },
   "cfb:401858229": {
     "pick_team": "North Carolina Tar Heels",
-    "last_notified_ts": 1789843553.5147498
+    "last_notified_ts": 1789851997.2737412
   },
   "cfb:401858451": {
     "pick_team": "Minnesota Golden Gophers",
@@ -433,6 +433,74 @@
   },
   "cfb:401858227": {
     "pick_team": "Boston College Eagles",
-    "last_notified_ts": 1789843553.5147498
+    "last_notified_ts": 1789851997.2737412
+  },
+  "mlb:822921": {
+    "pick_team": "BOS",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "mlb:823571": {
+    "pick_team": "PHI",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401858448": {
+    "pick_team": "Illinois Fighting Illini",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401862774": {
+    "pick_team": "Temple Owls",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401856797": {
+    "pick_team": "Miami (OH) RedHawks",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401856801": {
+    "pick_team": "Utah Utes",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401858233": {
+    "pick_team": "California Golden Bears",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401858450": {
+    "pick_team": "Michigan Wolverines",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401858457": {
+    "pick_team": "USC Trojans",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401860890": {
+    "pick_team": "Washington State Cougars",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401866424": {
+    "pick_team": "Massachusetts Minutemen",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401858231": {
+    "pick_team": "Duke Blue Devils",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401858449": {
+    "pick_team": "Indiana Hoosiers",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401858471": {
+    "pick_team": "Iowa Hawkeyes",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401866422": {
+    "pick_team": "Liberty Flames",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401867804": {
+    "pick_team": "Baylor Bears",
+    "last_notified_ts": 1789851997.2737412
+  },
+  "cfb:401868317": {
+    "pick_team": "SE Louisiana Lions",
+    "last_notified_ts": 1789851997.2737412
   }
 }
