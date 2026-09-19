@@ -469,7 +469,7 @@
   },
   "cfb:401858457": {
     "pick_team": "USC Trojans",
-    "last_notified_ts": 1789851997.2737412
+    "last_notified_ts": 1789858917.3059683
   },
   "cfb:401860890": {
     "pick_team": "Washington State Cougars",
@@ -481,26 +481,50 @@
   },
   "cfb:401858231": {
     "pick_team": "Duke Blue Devils",
-    "last_notified_ts": 1789851997.2737412
+    "last_notified_ts": 1789858917.3059683
   },
   "cfb:401858449": {
     "pick_team": "Indiana Hoosiers",
-    "last_notified_ts": 1789851997.2737412
+    "last_notified_ts": 1789858917.3059683
   },
   "cfb:401858471": {
     "pick_team": "Iowa Hawkeyes",
-    "last_notified_ts": 1789851997.2737412
+    "last_notified_ts": 1789858917.3059683
   },
   "cfb:401866422": {
     "pick_team": "Liberty Flames",
-    "last_notified_ts": 1789851997.2737412
+    "last_notified_ts": 1789858917.3059683
   },
   "cfb:401867804": {
     "pick_team": "Baylor Bears",
-    "last_notified_ts": 1789851997.2737412
+    "last_notified_ts": 1789858917.3059683
   },
   "cfb:401868317": {
     "pick_team": "SE Louisiana Lions",
-    "last_notified_ts": 1789851997.2737412
+    "last_notified_ts": 1789858917.3059683
+  },
+  "cfb:401856694": {
+    "pick_team": "Kentucky Wildcats",
+    "last_notified_ts": 1789858917.3059683
+  },
+  "cfb:401858230": {
+    "pick_team": "Louisville Cardinals",
+    "last_notified_ts": 1789858917.3059683
+  },
+  "cfb:401856691": {
+    "pick_team": "South Carolina Gamecocks",
+    "last_notified_ts": 1789858917.3059683
+  },
+  "cfb:401862710": {
+    "pick_team": "East Carolina Pirates",
+    "last_notified_ts": 1789858917.3059683
+  },
+  "cfb:401862771": {
+    "pick_team": "Florida Atlantic Owls",
+    "last_notified_ts": 1789858917.3059683
+  },
+  "cfb:401871047": {
+    "pick_team": "Marshall Thundering Herd",
+    "last_notified_ts": 1789858917.3059683
   }
 }
