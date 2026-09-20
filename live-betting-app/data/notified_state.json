@@ -618,5 +618,17 @@
   "cfb:401862776": {
     "pick_team": "Louisiana Ragin' Cajuns",
     "last_notified_ts": 1789866132.980382
+  },
+  "cfb:401858458": {
+    "pick_team": "UCLA Bruins",
+    "last_notified_ts": 1789884537.3069913
+  },
+  "cfb:401860886": {
+    "pick_team": "Oregon State Beavers",
+    "last_notified_ts": 1789884537.3069913
+  },
+  "cfb:401860888": {
+    "pick_team": "Fresno State Bulldogs",
+    "last_notified_ts": 1789884537.3069913
   }
 }
