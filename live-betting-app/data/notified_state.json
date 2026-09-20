@@ -630,5 +630,17 @@
   "cfb:401860888": {
     "pick_team": "Fresno State Bulldogs",
     "last_notified_ts": 1789884537.3069913
+  },
+  "mlb:823570": {
+    "pick_team": "NYM",
+    "last_notified_ts": 1789926258.250966
+  },
+  "mlb:823329": {
+    "pick_team": "PIT",
+    "last_notified_ts": 1789926258.250966
+  },
+  "mlb:822922": {
+    "pick_team": "BOS",
+    "last_notified_ts": 1789926258.250966
   }
 }
