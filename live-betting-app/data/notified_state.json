@@ -642,5 +642,9 @@
   "mlb:822922": {
     "pick_team": "BOS",
     "last_notified_ts": 1789926258.250966
+  },
+  "mlb:824381": {
+    "pick_team": "ATH",
+    "last_notified_ts": 1789933803.3516085
   }
 }
