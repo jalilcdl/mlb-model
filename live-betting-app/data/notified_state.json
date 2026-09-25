@@ -654,5 +654,13 @@
   "mlb:822841": {
     "pick_team": "TEX",
     "last_notified_ts": 1790212673.1398528
+  },
+  "mlb:823087": {
+    "pick_team": "LAA",
+    "last_notified_ts": 1790300512.6911755
+  },
+  "cfb:401869941": {
+    "pick_team": "Coastal Carolina Chanticleers",
+    "last_notified_ts": 1790300512.6911755
   }
 }
