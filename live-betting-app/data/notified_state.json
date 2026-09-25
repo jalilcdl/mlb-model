@@ -662,5 +662,13 @@
   "cfb:401869941": {
     "pick_team": "Coastal Carolina Chanticleers",
     "last_notified_ts": 1790300512.6911755
+  },
+  "cfb:401858468": {
+    "pick_team": "Rutgers Scarlet Knights",
+    "last_notified_ts": 1790379197.9313996
+  },
+  "cfb:401862778": {
+    "pick_team": "Navy Midshipmen",
+    "last_notified_ts": 1790379197.9313996
   }
 }
