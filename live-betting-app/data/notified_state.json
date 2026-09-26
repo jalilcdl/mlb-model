@@ -674,5 +674,41 @@
   "mlb:824058": {
     "pick_team": "CLE",
     "last_notified_ts": 1790387825.1096864
+  },
+  "cfb:401856704": {
+    "pick_team": "Texas Longhorns",
+    "last_notified_ts": 1790440601.2070208
+  },
+  "cfb:401856805": {
+    "pick_team": "Texas Tech Red Raiders",
+    "last_notified_ts": 1790440601.2070208
+  },
+  "cfb:401856813": {
+    "pick_team": "Colorado Buffaloes",
+    "last_notified_ts": 1790440601.2070208
+  },
+  "cfb:401858236": {
+    "pick_team": "Pittsburgh Panthers",
+    "last_notified_ts": 1790440601.2070208
+  },
+  "cfb:401858243": {
+    "pick_team": "Wake Forest Demon Deacons",
+    "last_notified_ts": 1790440601.2070208
+  },
+  "cfb:401858465": {
+    "pick_team": "Ohio State Buckeyes",
+    "last_notified_ts": 1790440601.2070208
+  },
+  "cfb:401860893": {
+    "pick_team": "Toledo Rockets",
+    "last_notified_ts": 1790440601.2070208
+  },
+  "cfb:401860896": {
+    "pick_team": "Colorado State Rams",
+    "last_notified_ts": 1790440601.2070208
+  },
+  "cfb:401866425": {
+    "pick_team": "Kent State Golden Flashes",
+    "last_notified_ts": 1790440601.2070208
   }
 }
