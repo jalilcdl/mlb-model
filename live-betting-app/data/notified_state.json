@@ -677,38 +677,66 @@
   },
   "cfb:401856704": {
     "pick_team": "Texas Longhorns",
-    "last_notified_ts": 1790440601.2070208
+    "last_notified_ts": 1790450602.460702
   },
   "cfb:401856805": {
     "pick_team": "Texas Tech Red Raiders",
-    "last_notified_ts": 1790440601.2070208
+    "last_notified_ts": 1790450602.460702
   },
   "cfb:401856813": {
-    "pick_team": "Colorado Buffaloes",
-    "last_notified_ts": 1790440601.2070208
+    "pick_team": "Baylor Bears",
+    "last_notified_ts": 1790450602.460702
   },
   "cfb:401858236": {
     "pick_team": "Pittsburgh Panthers",
-    "last_notified_ts": 1790440601.2070208
+    "last_notified_ts": 1790450602.460702
   },
   "cfb:401858243": {
     "pick_team": "Wake Forest Demon Deacons",
-    "last_notified_ts": 1790440601.2070208
+    "last_notified_ts": 1790450602.460702
   },
   "cfb:401858465": {
     "pick_team": "Ohio State Buckeyes",
-    "last_notified_ts": 1790440601.2070208
+    "last_notified_ts": 1790450602.460702
   },
   "cfb:401860893": {
     "pick_team": "Toledo Rockets",
     "last_notified_ts": 1790440601.2070208
   },
   "cfb:401860896": {
-    "pick_team": "Colorado State Rams",
-    "last_notified_ts": 1790440601.2070208
+    "pick_team": "UTSA Roadrunners",
+    "last_notified_ts": 1790450602.460702
   },
   "cfb:401866425": {
     "pick_team": "Kent State Golden Flashes",
     "last_notified_ts": 1790440601.2070208
+  },
+  "cfb:401858242": {
+    "pick_team": "Virginia Tech Hokies",
+    "last_notified_ts": 1790450602.460702
+  },
+  "cfb:401864576": {
+    "pick_team": "Kentucky Wildcats",
+    "last_notified_ts": 1790450602.460702
+  },
+  "cfb:401866427": {
+    "pick_team": "Eastern Michigan Eagles",
+    "last_notified_ts": 1790450602.460702
+  },
+  "cfb:401858462": {
+    "pick_team": "UCLA Bruins",
+    "last_notified_ts": 1790450602.460702
+  },
+  "cfb:401858467": {
+    "pick_team": "Notre Dame Fighting Irish",
+    "last_notified_ts": 1790450602.460702
+  },
+  "cfb:401864511": {
+    "pick_team": "Georgia State Panthers",
+    "last_notified_ts": 1790450602.460702
+  },
+  "cfb:401858237": {
+    "pick_team": "Florida State Seminoles",
+    "last_notified_ts": 1790450602.460702
   }
 }
