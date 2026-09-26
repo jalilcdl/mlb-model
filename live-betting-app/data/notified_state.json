@@ -670,5 +670,9 @@
   "cfb:401862778": {
     "pick_team": "Navy Midshipmen",
     "last_notified_ts": 1790379197.9313996
+  },
+  "mlb:824058": {
+    "pick_team": "CLE",
+    "last_notified_ts": 1790387825.1096864
   }
 }
