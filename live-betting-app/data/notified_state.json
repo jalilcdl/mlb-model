@@ -737,6 +737,62 @@
   },
   "cfb:401858237": {
     "pick_team": "Florida State Seminoles",
-    "last_notified_ts": 1790450602.460702
+    "last_notified_ts": 1790460322.693111
+  },
+  "mlb:823165": {
+    "pick_team": "SF",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401856700": {
+    "pick_team": "Georgia Bulldogs",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401856815": {
+    "pick_team": "TCU Horned Frogs",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401856816": {
+    "pick_team": "Utah Utes",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401858244": {
+    "pick_team": "Duke Blue Devils",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401858463": {
+    "pick_team": "Iowa Hawkeyes",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401860897": {
+    "pick_team": "Boise State Broncos",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401861970": {
+    "pick_team": "UConn Huskies",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401864579": {
+    "pick_team": "New Mexico Lobos",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401866428": {
+    "pick_team": "Ohio Bobcats",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401868188": {
+    "pick_team": "Gardner-Webb Runnin' Bulldogs",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401862781": {
+    "pick_team": "East Carolina Pirates",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401856698": {
+    "pick_team": "Auburn Tigers",
+    "last_notified_ts": 1790460322.693111
+  },
+  "cfb:401858464": {
+    "pick_team": "Nebraska Cornhuskers",
+    "last_notified_ts": 1790460322.693111
   }
 }
