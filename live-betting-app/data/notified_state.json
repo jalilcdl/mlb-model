@@ -870,5 +870,21 @@
   "cfb:401858470": {
     "pick_team": "Minnesota Golden Gophers",
     "last_notified_ts": 1790487734.8702986
+  },
+  "mlb:823408": {
+    "pick_team": "TB",
+    "last_notified_ts": 1790536309.0481362
+  },
+  "mlb:822761": {
+    "pick_team": "CIN",
+    "last_notified_ts": 1790536309.0481362
+  },
+  "mlb:823246": {
+    "pick_team": "SD",
+    "last_notified_ts": 1790536309.0481362
+  },
+  "mlb:823084": {
+    "pick_team": "LAA",
+    "last_notified_ts": 1790536309.0481362
   }
 }
