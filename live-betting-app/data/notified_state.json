@@ -858,5 +858,17 @@
   "cfb:401856697": {
     "pick_team": "Arkansas Razorbacks",
     "last_notified_ts": 1790469184.8268955
+  },
+  "cfb:401858240": {
+    "pick_team": "Georgia Tech Yellow Jackets",
+    "last_notified_ts": 1790487734.8702986
+  },
+  "cfb:401864509": {
+    "pick_team": "Air Force Falcons",
+    "last_notified_ts": 1790487734.8702986
+  },
+  "cfb:401858470": {
+    "pick_team": "Minnesota Golden Gophers",
+    "last_notified_ts": 1790487734.8702986
   }
 }
