@@ -886,5 +886,13 @@
   "mlb:823084": {
     "pick_team": "LAA",
     "last_notified_ts": 1790536309.0481362
+  },
+  "cfb:401862787": {
+    "pick_team": "Memphis Tigers",
+    "last_notified_ts": 1791043886.4866104
+  },
+  "cfb:401856819": {
+    "pick_team": "UCF Knights",
+    "last_notified_ts": 1791043886.4866104
   }
 }
