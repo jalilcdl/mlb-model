@@ -893,6 +893,22 @@
   },
   "cfb:401856819": {
     "pick_team": "UCF Knights",
-    "last_notified_ts": 1791043886.4866104
+    "last_notified_ts": 1791054937.872833
+  },
+  "cfb:401856707": {
+    "pick_team": "Alabama Crimson Tide",
+    "last_notified_ts": 1791054937.872833
+  },
+  "cfb:401856822": {
+    "pick_team": "West Virginia Mountaineers",
+    "last_notified_ts": 1791054937.872833
+  },
+  "cfb:401858250": {
+    "pick_team": "Notre Dame Fighting Irish",
+    "last_notified_ts": 1791054937.872833
+  },
+  "cfb:401858252": {
+    "pick_team": "Syracuse Orange",
+    "last_notified_ts": 1791054937.872833
   }
 }
