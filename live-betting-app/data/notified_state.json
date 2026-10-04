@@ -969,6 +969,58 @@
   },
   "cfb:401860899": {
     "pick_team": "Oregon State Beavers",
-    "last_notified_ts": 1791065575.3514848
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401862790": {
+    "pick_team": "Florida Atlantic Owls",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401856711": {
+    "pick_team": "Texas A&M Aggies",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401862788": {
+    "pick_team": "UTSA Roadrunners",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401869942": {
+    "pick_team": "Georgia Southern Eagles",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401871089": {
+    "pick_team": "South Alabama Jaguars",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401856821": {
+    "pick_team": "Colorado Buffaloes",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401858249": {
+    "pick_team": "Miami Hurricanes",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401858478": {
+    "pick_team": "USC Trojans",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401860898": {
+    "pick_team": "Boise State Broncos",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401869842": {
+    "pick_team": "Louisiana Tech Bulldogs",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401856706": {
+    "pick_team": "LSU Tigers",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401858477": {
+    "pick_team": "Indiana Hoosiers",
+    "last_notified_ts": 1791074616.883385
+  },
+  "cfb:401869932": {
+    "pick_team": "Louisiana Ragin' Cajuns",
+    "last_notified_ts": 1791074616.883385
   }
 }
