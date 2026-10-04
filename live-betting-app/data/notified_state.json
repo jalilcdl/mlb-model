@@ -1022,5 +1022,9 @@
   "cfb:401869932": {
     "pick_team": "Louisiana Ragin' Cajuns",
     "last_notified_ts": 1791074616.883385
+  },
+  "mlb:849825": {
+    "pick_team": "MIL",
+    "last_notified_ts": 1791144590.8865418
   }
 }
