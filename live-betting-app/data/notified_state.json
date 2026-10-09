@@ -1026,5 +1026,9 @@
   "mlb:849825": {
     "pick_team": "MIL",
     "last_notified_ts": 1791144590.8865418
+  },
+  "cfb:401862794": {
+    "pick_team": "South Florida Bulls",
+    "last_notified_ts": 1791505578.7603595
   }
 }
