@@ -1030,5 +1030,21 @@
   "cfb:401862794": {
     "pick_team": "South Florida Bulls",
     "last_notified_ts": 1791505578.7603595
+  },
+  "cfb:401858254": {
+    "pick_team": "Louisville Cardinals",
+    "last_notified_ts": 1791599026.401965
+  },
+  "cfb:401858487": {
+    "pick_team": "Iowa Hawkeyes",
+    "last_notified_ts": 1791599026.401965
+  },
+  "cfb:401860922": {
+    "pick_team": "Washington State Cougars",
+    "last_notified_ts": 1791599026.401965
+  },
+  "cfb:401864519": {
+    "pick_team": "Wyoming Cowboys",
+    "last_notified_ts": 1791599026.401965
   }
 }
