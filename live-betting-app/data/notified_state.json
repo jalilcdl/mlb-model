@@ -1094,5 +1094,61 @@
   "cfb:401866440": {
     "pick_team": "Miami (OH) RedHawks",
     "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401856718": {
+    "pick_team": "Ole Miss Rebels",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401856825": {
+    "pick_team": "Houston Cougars",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401858255": {
+    "pick_team": "Georgia Tech Yellow Jackets",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401858257": {
+    "pick_team": "Notre Dame Fighting Irish",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401858259": {
+    "pick_team": "California Golden Bears",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401858480": {
+    "pick_team": "Illinois Fighting Illini",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401862796": {
+    "pick_team": "North Texas Mean Green",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401866435": {
+    "pick_team": "Akron Zips",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401866437": {
+    "pick_team": "Buffalo Bulls",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401866438": {
+    "pick_team": "Ohio Bobcats",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401866439": {
+    "pick_team": "Western Michigan Broncos",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401856713": {
+    "pick_team": "Arkansas Razorbacks",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401858483": {
+    "pick_team": "Ohio State Buckeyes",
+    "last_notified_ts": 1791671318.9634237
+  },
+  "cfb:401860902": {
+    "pick_team": "Oregon State Beavers",
+    "last_notified_ts": 1791671318.9634237
   }
 }
