@@ -1046,5 +1046,53 @@
   "cfb:401864519": {
     "pick_team": "Wyoming Cowboys",
     "last_notified_ts": 1791599026.401965
+  },
+  "cfb:401856823": {
+    "pick_team": "Arizona Wildcats",
+    "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401856824": {
+    "pick_team": "Oklahoma State Cowboys",
+    "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401858256": {
+    "pick_team": "North Carolina Tar Heels",
+    "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401858260": {
+    "pick_team": "Wake Forest Demon Deacons",
+    "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401858481": {
+    "pick_team": "Indiana Hoosiers",
+    "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401862795": {
+    "pick_team": "Tulane Green Wave",
+    "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401866436": {
+    "pick_team": "Bowling Green Falcons",
+    "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401858482": {
+    "pick_team": "Northwestern Wildcats",
+    "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401856714": {
+    "pick_team": "South Carolina Gamecocks",
+    "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401862797": {
+    "pick_team": "Rice Owls",
+    "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401869843": {
+    "pick_team": "Old Dominion Monarchs",
+    "last_notified_ts": 1791659131.9092195
+  },
+  "cfb:401866440": {
+    "pick_team": "Miami (OH) RedHawks",
+    "last_notified_ts": 1791659131.9092195
   }
 }
