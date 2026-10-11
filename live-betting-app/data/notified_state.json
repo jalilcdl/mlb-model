@@ -1149,6 +1149,54 @@
   },
   "cfb:401860902": {
     "pick_team": "Oregon State Beavers",
-    "last_notified_ts": 1791671318.9634237
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401856715": {
+    "pick_team": "LSU Tigers",
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401862798": {
+    "pick_team": "UAB Blazers",
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401864517": {
+    "pick_team": "Nevada Wolf Pack",
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401864518": {
+    "pick_team": "North Dakota State Bison",
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401869943": {
+    "pick_team": "Coastal Carolina Chanticleers",
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401856712": {
+    "pick_team": "Georgia Bulldogs",
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401858258": {
+    "pick_team": "Syracuse Orange",
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401858485": {
+    "pick_team": "USC Trojans",
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401864516": {
+    "pick_team": "Air Force Falcons",
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401869965": {
+    "pick_team": "Louisiana Ragin' Cajuns",
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401856827": {
+    "pick_team": "Utah Utes",
+    "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401858486": {
+    "pick_team": "Purdue Boilermakers",
+    "last_notified_ts": 1791681136.6684802
   }
 }
