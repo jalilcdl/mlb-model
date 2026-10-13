@@ -1198,5 +1198,9 @@
   "cfb:401858486": {
     "pick_team": "Purdue Boilermakers",
     "last_notified_ts": 1791681136.6684802
+  },
+  "cfb:401871067": {
+    "pick_team": "Middle Tennessee Blue Raiders",
+    "last_notified_ts": 1791935681.8103943
   }
 }
