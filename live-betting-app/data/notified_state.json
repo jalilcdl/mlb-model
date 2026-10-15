@@ -1202,5 +1202,13 @@
   "cfb:401871067": {
     "pick_team": "Middle Tennessee Blue Raiders",
     "last_notified_ts": 1791935681.8103943
+  },
+  "cfb:401871054": {
+    "pick_team": "Missouri State Bears",
+    "last_notified_ts": 1792024362.5932937
+  },
+  "cfb:401871068": {
+    "pick_team": "Western Kentucky Hilltoppers",
+    "last_notified_ts": 1792024362.5932937
   }
 }
