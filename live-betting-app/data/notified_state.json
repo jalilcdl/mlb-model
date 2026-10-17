@@ -1333,6 +1333,30 @@
   },
   "cfb:401869966": {
     "pick_team": "Louisiana Ragin' Cajuns",
-    "last_notified_ts": 1792272207.443222
+    "last_notified_ts": 1792279126.508347
+  },
+  "cfb:401862805": {
+    "pick_team": "Tulsa Golden Hurricane",
+    "last_notified_ts": 1792279126.508347
+  },
+  "cfb:401860903": {
+    "pick_team": "Oregon State Beavers",
+    "last_notified_ts": 1792279126.508347
+  },
+  "cfb:401856726": {
+    "pick_team": "Arkansas Razorbacks",
+    "last_notified_ts": 1792279126.508347
+  },
+  "cfb:401862806": {
+    "pick_team": "Kent State Golden Flashes",
+    "last_notified_ts": 1792279126.508347
+  },
+  "cfb:401864520": {
+    "pick_team": "Nevada Wolf Pack",
+    "last_notified_ts": 1792279126.508347
+  },
+  "cfb:401869934": {
+    "pick_team": "Arkansas State Red Wolves",
+    "last_notified_ts": 1792279126.508347
   }
 }
