@@ -1225,42 +1225,70 @@
   },
   "cfb:401856720": {
     "pick_team": "LSU Tigers",
-    "last_notified_ts": 1792255870.0581946
+    "last_notified_ts": 1792263499.6377535
   },
   "cfb:401856724": {
-    "pick_team": "Texas Longhorns",
-    "last_notified_ts": 1792255870.0581946
+    "pick_team": "Florida Gators",
+    "last_notified_ts": 1792263499.6377535
   },
   "cfb:401856830": {
-    "pick_team": "Kansas Jayhawks",
-    "last_notified_ts": 1792255870.0581946
+    "pick_team": "Kansas State Wildcats",
+    "last_notified_ts": 1792263499.6377535
   },
   "cfb:401858261": {
     "pick_team": "Clemson Tigers",
-    "last_notified_ts": 1792255870.0581946
+    "last_notified_ts": 1792263499.6377535
   },
   "cfb:401858267": {
-    "pick_team": "Pittsburgh Panthers",
-    "last_notified_ts": 1792255870.0581946
+    "pick_team": "Boston College Eagles",
+    "last_notified_ts": 1792263499.6377535
   },
   "cfb:401858268": {
-    "pick_team": "Virginia Cavaliers",
-    "last_notified_ts": 1792255870.0581946
+    "pick_team": "SMU Mustangs",
+    "last_notified_ts": 1792263499.6377535
   },
   "cfb:401858488": {
     "pick_team": "Ohio State Buckeyes",
-    "last_notified_ts": 1792255870.0581946
+    "last_notified_ts": 1792263499.6377535
   },
   "cfb:401866441": {
-    "pick_team": "Ball State Cardinals",
-    "last_notified_ts": 1792255870.0581946
+    "pick_team": "Bowling Green Falcons",
+    "last_notified_ts": 1792263499.6377535
   },
   "cfb:401869957": {
     "pick_team": "James Madison Dukes",
-    "last_notified_ts": 1792255870.0581946
+    "last_notified_ts": 1792263499.6377535
   },
   "cfb:401858489": {
-    "pick_team": "Rutgers Scarlet Knights",
-    "last_notified_ts": 1792255870.0581946
+    "pick_team": "Maryland Terrapins",
+    "last_notified_ts": 1792263499.6377535
+  },
+  "cfb:401856829": {
+    "pick_team": "Cincinnati Bearcats",
+    "last_notified_ts": 1792263499.6377535
+  },
+  "cfb:401858491": {
+    "pick_team": "Michigan State Spartans",
+    "last_notified_ts": 1792263499.6377535
+  },
+  "cfb:401862802": {
+    "pick_team": "Army Black Knights",
+    "last_notified_ts": 1792263499.6377535
+  },
+  "cfb:401856725": {
+    "pick_team": "Texas A&M Aggies",
+    "last_notified_ts": 1792263499.6377535
+  },
+  "cfb:401862803": {
+    "pick_team": "Charlotte 49ers",
+    "last_notified_ts": 1792263499.6377535
+  },
+  "cfb:401866442": {
+    "pick_team": "Massachusetts Minutemen",
+    "last_notified_ts": 1792263499.6377535
+  },
+  "cfb:401866443": {
+    "pick_team": "Western Michigan Broncos",
+    "last_notified_ts": 1792263499.6377535
   }
 }
