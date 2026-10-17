@@ -1290,5 +1290,49 @@
   "cfb:401866443": {
     "pick_team": "Western Michigan Broncos",
     "last_notified_ts": 1792263499.6377535
+  },
+  "cfb:401856719": {
+    "pick_team": "Auburn Tigers",
+    "last_notified_ts": 1792272207.443222
+  },
+  "cfb:401856721": {
+    "pick_team": "Ole Miss Rebels",
+    "last_notified_ts": 1792272207.443222
+  },
+  "cfb:401856828": {
+    "pick_team": "Texas Tech Red Raiders",
+    "last_notified_ts": 1792272207.443222
+  },
+  "cfb:401858264": {
+    "pick_team": "Virginia Tech Hokies",
+    "last_notified_ts": 1792272207.443222
+  },
+  "cfb:401858266": {
+    "pick_team": "North Carolina Tar Heels",
+    "last_notified_ts": 1792272207.443222
+  },
+  "cfb:401858490": {
+    "pick_team": "Penn State Nittany Lions",
+    "last_notified_ts": 1792272207.443222
+  },
+  "cfb:401864522": {
+    "pick_team": "Wyoming Cowboys",
+    "last_notified_ts": 1792272207.443222
+  },
+  "cfb:401864524": {
+    "pick_team": "UNLV Rebels",
+    "last_notified_ts": 1792272207.443222
+  },
+  "cfb:401866444": {
+    "pick_team": "Toledo Rockets",
+    "last_notified_ts": 1792272207.443222
+  },
+  "cfb:401866478": {
+    "pick_team": "Miami (OH) RedHawks",
+    "last_notified_ts": 1792272207.443222
+  },
+  "cfb:401869966": {
+    "pick_team": "Louisiana Ragin' Cajuns",
+    "last_notified_ts": 1792272207.443222
   }
 }
