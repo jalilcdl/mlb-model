@@ -1222,5 +1222,45 @@
   "cfb:401869844": {
     "pick_team": "App State Mountaineers",
     "last_notified_ts": 1792200214.7366862
+  },
+  "cfb:401856720": {
+    "pick_team": "LSU Tigers",
+    "last_notified_ts": 1792255870.0581946
+  },
+  "cfb:401856724": {
+    "pick_team": "Texas Longhorns",
+    "last_notified_ts": 1792255870.0581946
+  },
+  "cfb:401856830": {
+    "pick_team": "Kansas Jayhawks",
+    "last_notified_ts": 1792255870.0581946
+  },
+  "cfb:401858261": {
+    "pick_team": "Clemson Tigers",
+    "last_notified_ts": 1792255870.0581946
+  },
+  "cfb:401858267": {
+    "pick_team": "Pittsburgh Panthers",
+    "last_notified_ts": 1792255870.0581946
+  },
+  "cfb:401858268": {
+    "pick_team": "Virginia Cavaliers",
+    "last_notified_ts": 1792255870.0581946
+  },
+  "cfb:401858488": {
+    "pick_team": "Ohio State Buckeyes",
+    "last_notified_ts": 1792255870.0581946
+  },
+  "cfb:401866441": {
+    "pick_team": "Ball State Cardinals",
+    "last_notified_ts": 1792255870.0581946
+  },
+  "cfb:401869957": {
+    "pick_team": "James Madison Dukes",
+    "last_notified_ts": 1792255870.0581946
+  },
+  "cfb:401858489": {
+    "pick_team": "Rutgers Scarlet Knights",
+    "last_notified_ts": 1792255870.0581946
   }
 }
