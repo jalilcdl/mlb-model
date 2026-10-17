@@ -1210,5 +1210,17 @@
   "cfb:401871068": {
     "pick_team": "Western Kentucky Hilltoppers",
     "last_notified_ts": 1792024362.5932937
+  },
+  "cfb:401862801": {
+    "pick_team": "Tulane Green Wave",
+    "last_notified_ts": 1792200214.7366862
+  },
+  "cfb:401858493": {
+    "pick_team": "Washington Huskies",
+    "last_notified_ts": 1792200214.7366862
+  },
+  "cfb:401869844": {
+    "pick_team": "App State Mountaineers",
+    "last_notified_ts": 1792200214.7366862
   }
 }
