@@ -1341,22 +1341,62 @@
   },
   "cfb:401860903": {
     "pick_team": "Oregon State Beavers",
-    "last_notified_ts": 1792279126.508347
+    "last_notified_ts": 1792286100.5293653
   },
   "cfb:401856726": {
     "pick_team": "Arkansas Razorbacks",
-    "last_notified_ts": 1792279126.508347
+    "last_notified_ts": 1792286100.5293653
   },
   "cfb:401862806": {
-    "pick_team": "Kent State Golden Flashes",
-    "last_notified_ts": 1792279126.508347
+    "pick_team": "South Florida Bulls",
+    "last_notified_ts": 1792286100.5293653
   },
   "cfb:401864520": {
-    "pick_team": "Nevada Wolf Pack",
-    "last_notified_ts": 1792279126.508347
+    "pick_team": "North Dakota State Bison",
+    "last_notified_ts": 1792286100.5293653
   },
   "cfb:401869934": {
     "pick_team": "Arkansas State Red Wolves",
-    "last_notified_ts": 1792279126.508347
+    "last_notified_ts": 1792286100.5293653
+  },
+  "cfb:401856832": {
+    "pick_team": "TCU Horned Frogs",
+    "last_notified_ts": 1792286100.5293653
+  },
+  "cfb:401858263": {
+    "pick_team": "Florida State Seminoles",
+    "last_notified_ts": 1792286100.5293653
+  },
+  "cfb:401856722": {
+    "pick_team": "Oklahoma Sooners",
+    "last_notified_ts": 1792286100.5293653
+  },
+  "cfb:401856809": {
+    "pick_team": "BYU Cougars",
+    "last_notified_ts": 1792286100.5293653
+  },
+  "cfb:401856831": {
+    "pick_team": "Houston Cougars",
+    "last_notified_ts": 1792286100.5293653
+  },
+  "cfb:401858265": {
+    "pick_team": "Louisville Cardinals",
+    "last_notified_ts": 1792286100.5293653
+  },
+  "cfb:401858494": {
+    "pick_team": "UCLA Bruins",
+    "last_notified_ts": 1792286100.5293653
+  },
+  "cfb:401862804": {
+    "pick_team": "Navy Midshipmen",
+    "last_notified_ts": 1792286100.5293653
+  },
+  "cfb:401871091": {
+    "pick_team": "Louisiana Tech Bulldogs",
+    "last_notified_ts": 1792286100.5293653
+  },
+  "cfb:401864523": {
+    "pick_team": "San Jos\u00e9 State Spartans",
+    "last_notified_ts": 1792286100.5293653
   }
 }
