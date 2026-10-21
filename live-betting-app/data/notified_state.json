@@ -1398,5 +1398,17 @@
   "cfb:401864523": {
     "pick_team": "San Jos\u00e9 State Spartans",
     "last_notified_ts": 1792286100.5293653
+  },
+  "cfb:401871055": {
+    "pick_team": "Middle Tennessee Blue Raiders",
+    "last_notified_ts": 1792543342.9458187
+  },
+  "cfb:401871069": {
+    "pick_team": "Missouri State Bears",
+    "last_notified_ts": 1792543342.9458187
+  },
+  "cfb:401871092": {
+    "pick_team": "South Alabama Jaguars",
+    "last_notified_ts": 1792543342.9458187
   }
 }
