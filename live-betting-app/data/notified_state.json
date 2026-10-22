@@ -1410,5 +1410,9 @@
   "cfb:401871092": {
     "pick_team": "South Alabama Jaguars",
     "last_notified_ts": 1792543342.9458187
+  },
+  "cfb:401869845": {
+    "pick_team": "James Madison Dukes",
+    "last_notified_ts": 1792710997.1597772
   }
 }
