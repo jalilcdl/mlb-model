@@ -1422,5 +1422,13 @@
   "cfb:401862807": {
     "pick_team": "East Carolina Pirates",
     "last_notified_ts": 1792719515.6328876
+  },
+  "cfb:401858271": {
+    "pick_team": "Duke Blue Devils",
+    "last_notified_ts": 1792797346.2813783
+  },
+  "cfb:401861965": {
+    "pick_team": "Massachusetts Minutemen",
+    "last_notified_ts": 1792797346.2813783
   }
 }
