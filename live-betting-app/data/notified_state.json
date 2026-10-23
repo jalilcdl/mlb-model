@@ -1413,6 +1413,14 @@
   },
   "cfb:401869845": {
     "pick_team": "James Madison Dukes",
-    "last_notified_ts": 1792710997.1597772
+    "last_notified_ts": 1792719515.6328876
+  },
+  "cfb:401871056": {
+    "pick_team": "Liberty Flames",
+    "last_notified_ts": 1792719515.6328876
+  },
+  "cfb:401862807": {
+    "pick_team": "East Carolina Pirates",
+    "last_notified_ts": 1792719515.6328876
   }
 }
