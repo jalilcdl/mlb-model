@@ -1438,5 +1438,45 @@
   "cfb:401864525": {
     "pick_team": "Wyoming Cowboys",
     "last_notified_ts": 1792806141.1501918
+  },
+  "cfb:401856728": {
+    "pick_team": "LSU Tigers",
+    "last_notified_ts": 1792863904.6625226
+  },
+  "cfb:401856840": {
+    "pick_team": "Cincinnati Bearcats",
+    "last_notified_ts": 1792863904.6625226
+  },
+  "cfb:401856841": {
+    "pick_team": "TCU Horned Frogs",
+    "last_notified_ts": 1792863904.6625226
+  },
+  "cfb:401858274": {
+    "pick_team": "Miami Hurricanes",
+    "last_notified_ts": 1792863904.6625226
+  },
+  "cfb:401858496": {
+    "pick_team": "Indiana Hoosiers",
+    "last_notified_ts": 1792863904.6625226
+  },
+  "cfb:401858498": {
+    "pick_team": "Northwestern Wildcats",
+    "last_notified_ts": 1792863904.6625226
+  },
+  "cfb:401862809": {
+    "pick_team": "Florida Atlantic Owls",
+    "last_notified_ts": 1792863904.6625226
+  },
+  "cfb:401866450": {
+    "pick_team": "Toledo Rockets",
+    "last_notified_ts": 1792863904.6625226
+  },
+  "cfb:401866446": {
+    "pick_team": "Akron Zips",
+    "last_notified_ts": 1792863904.6625226
+  },
+  "cfb:401866476": {
+    "pick_team": "Miami (OH) RedHawks",
+    "last_notified_ts": 1792863904.6625226
   }
 }
