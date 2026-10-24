@@ -1472,11 +1472,47 @@
     "last_notified_ts": 1792863904.6625226
   },
   "cfb:401866446": {
-    "pick_team": "Akron Zips",
-    "last_notified_ts": 1792863904.6625226
+    "pick_team": "Kent State Golden Flashes",
+    "last_notified_ts": 1792871502.878307
   },
   "cfb:401866476": {
-    "pick_team": "Miami (OH) RedHawks",
-    "last_notified_ts": 1792863904.6625226
+    "pick_team": "Central Michigan Chippewas",
+    "last_notified_ts": 1792871502.878307
+  },
+  "cfb:401856834": {
+    "pick_team": "Baylor Bears",
+    "last_notified_ts": 1792871502.878307
+  },
+  "cfb:401858495": {
+    "pick_team": "Oregon Ducks",
+    "last_notified_ts": 1792871502.878307
+  },
+  "cfb:401856730": {
+    "pick_team": "Oklahoma Sooners",
+    "last_notified_ts": 1792871502.878307
+  },
+  "cfb:401856731": {
+    "pick_team": "South Carolina Gamecocks",
+    "last_notified_ts": 1792871502.878307
+  },
+  "cfb:401856835": {
+    "pick_team": "BYU Cougars",
+    "last_notified_ts": 1792871502.878307
+  },
+  "cfb:401858273": {
+    "pick_team": "Georgia Tech Yellow Jackets",
+    "last_notified_ts": 1792871502.878307
+  },
+  "cfb:401862810": {
+    "pick_team": "North Texas Mean Green",
+    "last_notified_ts": 1792871502.878307
+  },
+  "cfb:401864526": {
+    "pick_team": "Hawai'i Rainbow Warriors",
+    "last_notified_ts": 1792871502.878307
+  },
+  "cfb:401866447": {
+    "pick_team": "Sacramento State Hornets",
+    "last_notified_ts": 1792871502.878307
   }
 }
