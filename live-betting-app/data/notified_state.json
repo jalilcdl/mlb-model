@@ -1489,30 +1489,66 @@
   },
   "cfb:401856730": {
     "pick_team": "Oklahoma Sooners",
-    "last_notified_ts": 1792871502.878307
+    "last_notified_ts": 1792879951.0988255
   },
   "cfb:401856731": {
-    "pick_team": "South Carolina Gamecocks",
-    "last_notified_ts": 1792871502.878307
+    "pick_team": "Tennessee Volunteers",
+    "last_notified_ts": 1792879951.0988255
   },
   "cfb:401856835": {
     "pick_team": "BYU Cougars",
     "last_notified_ts": 1792871502.878307
   },
   "cfb:401858273": {
-    "pick_team": "Georgia Tech Yellow Jackets",
-    "last_notified_ts": 1792871502.878307
+    "pick_team": "Boston College Eagles",
+    "last_notified_ts": 1792879951.0988255
   },
   "cfb:401862810": {
     "pick_team": "North Texas Mean Green",
-    "last_notified_ts": 1792871502.878307
+    "last_notified_ts": 1792879951.0988255
   },
   "cfb:401864526": {
     "pick_team": "Hawai'i Rainbow Warriors",
-    "last_notified_ts": 1792871502.878307
+    "last_notified_ts": 1792879951.0988255
   },
   "cfb:401866447": {
-    "pick_team": "Sacramento State Hornets",
-    "last_notified_ts": 1792871502.878307
+    "pick_team": "Ball State Cardinals",
+    "last_notified_ts": 1792879951.0988255
+  },
+  "cfb:401856727": {
+    "pick_team": "Texas A&M Aggies",
+    "last_notified_ts": 1792879951.0988255
+  },
+  "cfb:401858497": {
+    "pick_team": "Minnesota Golden Gophers",
+    "last_notified_ts": 1792879951.0988255
+  },
+  "cfb:401858499": {
+    "pick_team": "UCLA Bruins",
+    "last_notified_ts": 1792879951.0988255
+  },
+  "cfb:401866448": {
+    "pick_team": "Buffalo Bulls",
+    "last_notified_ts": 1792879951.0988255
+  },
+  "cfb:401856839": {
+    "pick_team": "Kansas State Wildcats",
+    "last_notified_ts": 1792879951.0988255
+  },
+  "cfb:401866449": {
+    "pick_team": "Eastern Michigan Eagles",
+    "last_notified_ts": 1792879951.0988255
+  },
+  "cfb:401871094": {
+    "pick_team": "UL Monroe Warhawks",
+    "last_notified_ts": 1792879951.0988255
+  },
+  "cfb:401869967": {
+    "pick_team": "Louisiana Ragin' Cajuns",
+    "last_notified_ts": 1792879951.0988255
+  },
+  "cfb:401871093": {
+    "pick_team": "Louisiana Tech Bulldogs",
+    "last_notified_ts": 1792879951.0988255
   }
 }
