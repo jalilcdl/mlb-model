@@ -1545,10 +1545,50 @@
   },
   "cfb:401869967": {
     "pick_team": "Louisiana Ragin' Cajuns",
-    "last_notified_ts": 1792879951.0988255
+    "last_notified_ts": 1792887717.483566
   },
   "cfb:401871093": {
     "pick_team": "Louisiana Tech Bulldogs",
     "last_notified_ts": 1792879951.0988255
+  },
+  "mlb:849802": {
+    "pick_team": "MIL",
+    "last_notified_ts": 1792887717.483566
+  },
+  "cfb:401864528": {
+    "pick_team": "Nevada Wolf Pack",
+    "last_notified_ts": 1792887717.483566
+  },
+  "cfb:401860907": {
+    "pick_team": "Boise State Broncos",
+    "last_notified_ts": 1792887717.483566
+  },
+  "cfb:401860905": {
+    "pick_team": "Colorado State Rams",
+    "last_notified_ts": 1792887717.483566
+  },
+  "cfb:401856836": {
+    "pick_team": "Colorado Buffaloes",
+    "last_notified_ts": 1792887717.483566
+  },
+  "cfb:401858276": {
+    "pick_team": "Virginia Tech Hokies",
+    "last_notified_ts": 1792887717.483566
+  },
+  "cfb:401869935": {
+    "pick_team": "Georgia State Panthers",
+    "last_notified_ts": 1792887717.483566
+  },
+  "cfb:401856729": {
+    "pick_team": "Vanderbilt Commodores",
+    "last_notified_ts": 1792887717.483566
+  },
+  "cfb:401856838": {
+    "pick_team": "Arizona Wildcats",
+    "last_notified_ts": 1792887717.483566
+  },
+  "cfb:401858500": {
+    "pick_team": "USC Trojans",
+    "last_notified_ts": 1792887717.483566
   }
 }
