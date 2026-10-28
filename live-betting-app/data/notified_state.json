@@ -1590,5 +1590,13 @@
   "cfb:401858500": {
     "pick_team": "USC Trojans",
     "last_notified_ts": 1792887717.483566
+  },
+  "cfb:401871071": {
+    "pick_team": "Delaware Blue Hens",
+    "last_notified_ts": 1793150592.3970716
+  },
+  "cfb:401871072": {
+    "pick_team": "Missouri State Bears",
+    "last_notified_ts": 1793150592.3970716
   }
 }
