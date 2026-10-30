@@ -1598,5 +1598,13 @@
   "cfb:401871072": {
     "pick_team": "Missouri State Bears",
     "last_notified_ts": 1793150592.3970716
+  },
+  "cfb:401862812": {
+    "pick_team": "Florida Atlantic Owls",
+    "last_notified_ts": 1793321529.346145
+  },
+  "cfb:401869963": {
+    "pick_team": "James Madison Dukes",
+    "last_notified_ts": 1793321529.346145
   }
 }
