@@ -1606,5 +1606,13 @@
   "cfb:401869963": {
     "pick_team": "James Madison Dukes",
     "last_notified_ts": 1793321529.346145
+  },
+  "cfb:401862813": {
+    "pick_team": "Tulane Green Wave",
+    "last_notified_ts": 1793411614.9430335
+  },
+  "cfb:401856844": {
+    "pick_team": "Baylor Bears",
+    "last_notified_ts": 1793411614.9430335
   }
 }
