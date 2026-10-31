@@ -1614,5 +1614,41 @@
   "cfb:401856844": {
     "pick_team": "Baylor Bears",
     "last_notified_ts": 1793411614.9430335
+  },
+  "cfb:401856842": {
+    "pick_team": "Arizona Wildcats",
+    "last_notified_ts": 1793472170.4450748
+  },
+  "cfb:401858277": {
+    "pick_team": "NC State Wolfpack",
+    "last_notified_ts": 1793472170.4450748
+  },
+  "cfb:401858278": {
+    "pick_team": "SMU Mustangs",
+    "last_notified_ts": 1793472170.4450748
+  },
+  "cfb:401858279": {
+    "pick_team": "Duke Blue Devils",
+    "last_notified_ts": 1793472170.4450748
+  },
+  "cfb:401858502": {
+    "pick_team": "Iowa Hawkeyes",
+    "last_notified_ts": 1793472170.4450748
+  },
+  "cfb:401858503": {
+    "pick_team": "Illinois Fighting Illini",
+    "last_notified_ts": 1793472170.4450748
+  },
+  "cfb:401859185": {
+    "pick_team": "Notre Dame Fighting Irish",
+    "last_notified_ts": 1793472170.4450748
+  },
+  "cfb:401858507": {
+    "pick_team": "Michigan Wolverines",
+    "last_notified_ts": 1793472170.4450748
+  },
+  "cfb:401871096": {
+    "pick_team": "Marshall Thundering Herd",
+    "last_notified_ts": 1793472170.4450748
   }
 }
