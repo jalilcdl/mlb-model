@@ -1650,5 +1650,69 @@
   "cfb:401871096": {
     "pick_team": "Marshall Thundering Herd",
     "last_notified_ts": 1793472170.4450748
+  },
+  "cfb:401861966": {
+    "pick_team": "Air Force Falcons",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401871097": {
+    "pick_team": "Louisiana Tech Bulldogs",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401856734": {
+    "pick_team": "Georgia Bulldogs",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401856843": {
+    "pick_team": "Arizona State Sun Devils",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401856845": {
+    "pick_team": "Kansas Jayhawks",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401858501": {
+    "pick_team": "Minnesota Golden Gophers",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401858505": {
+    "pick_team": "Northwestern Wildcats",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401860910": {
+    "pick_team": "Utah State Aggies",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401864531": {
+    "pick_team": "North Dakota State Bison",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401871059": {
+    "pick_team": "Liberty Flames",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401871095": {
+    "pick_team": "Southern Miss Golden Eagles",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401856848": {
+    "pick_team": "Utah Utes",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401858284": {
+    "pick_team": "Wake Forest Demon Deacons",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401864529": {
+    "pick_team": "New Mexico Lobos",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401856736": {
+    "pick_team": "South Carolina Gamecocks",
+    "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401858508": {
+    "pick_team": "UCLA Bruins",
+    "last_notified_ts": 1793483691.2024724
   }
 }
