@@ -1714,5 +1714,33 @@
   "cfb:401858508": {
     "pick_team": "UCLA Bruins",
     "last_notified_ts": 1793483691.2024724
+  },
+  "cfb:401869846": {
+    "pick_team": "Georgia Southern Eagles",
+    "last_notified_ts": 1793494107.4408607
+  },
+  "cfb:401858280": {
+    "pick_team": "Clemson Tigers",
+    "last_notified_ts": 1793494107.4408607
+  },
+  "cfb:401860909": {
+    "pick_team": "Washington State Cougars",
+    "last_notified_ts": 1793494107.4408607
+  },
+  "cfb:401856737": {
+    "pick_team": "Texas Longhorns",
+    "last_notified_ts": 1793494107.4408607
+  },
+  "cfb:401858282": {
+    "pick_team": "Miami Hurricanes",
+    "last_notified_ts": 1793494107.4408607
+  },
+  "cfb:401856733": {
+    "pick_team": "Missouri Tigers",
+    "last_notified_ts": 1793494107.4408607
+  },
+  "cfb:401858504": {
+    "pick_team": "Nebraska Cornhuskers",
+    "last_notified_ts": 1793494107.4408607
   }
 }
