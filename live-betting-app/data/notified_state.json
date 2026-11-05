@@ -1742,5 +1742,17 @@
   "cfb:401858504": {
     "pick_team": "Nebraska Cornhuskers",
     "last_notified_ts": 1793494107.4408607
+  },
+  "cfb:401866455": {
+    "pick_team": "Massachusetts Minutemen",
+    "last_notified_ts": 1793847224.0460064
+  },
+  "cfb:401866457": {
+    "pick_team": "Toledo Rockets",
+    "last_notified_ts": 1793847224.0460064
+  },
+  "cfb:401866456": {
+    "pick_team": "Central Michigan Chippewas",
+    "last_notified_ts": 1793847224.0460064
   }
 }
