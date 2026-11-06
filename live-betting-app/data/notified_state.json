@@ -1754,5 +1754,13 @@
   "cfb:401866456": {
     "pick_team": "Central Michigan Chippewas",
     "last_notified_ts": 1793847224.0460064
+  },
+  "cfb:401862817": {
+    "pick_team": "Florida Atlantic Owls",
+    "last_notified_ts": 1793936478.7646768
+  },
+  "cfb:401869964": {
+    "pick_team": "James Madison Dukes",
+    "last_notified_ts": 1793936478.7646768
   }
 }
