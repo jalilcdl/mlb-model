@@ -1816,7 +1816,71 @@
     "last_notified_ts": 1794082800.5442452
   },
   "cfb:401871073": {
-    "pick_team": "Delaware Blue Hens",
-    "last_notified_ts": 1794082800.5442452
+    "pick_team": "Kennesaw State Owls",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401856740": {
+    "pick_team": "Alabama Crimson Tide",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401858290": {
+    "pick_team": "Wake Forest Demon Deacons",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401858514": {
+    "pick_team": "Oregon Ducks",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401858516": {
+    "pick_team": "Penn State Nittany Lions",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401862819": {
+    "pick_team": "UAB Blazers",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401862820": {
+    "pick_team": "Temple Owls",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401869951": {
+    "pick_team": "Georgia Southern Eagles",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401871076": {
+    "pick_team": "Middle Tennessee Blue Raiders",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401856850": {
+    "pick_team": "UCF Knights",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401862821": {
+    "pick_team": "North Texas Mean Green",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401864534": {
+    "pick_team": "San Jos\u00e9 State Spartans",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401871074": {
+    "pick_team": "Florida International Panthers",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401871098": {
+    "pick_team": "Louisiana Tech Bulldogs",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401856742": {
+    "pick_team": "Vanderbilt Commodores",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401858517": {
+    "pick_team": "Wisconsin Badgers",
+    "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401860911": {
+    "pick_team": "Boise State Broncos",
+    "last_notified_ts": 1794095085.1331184
   }
 }
