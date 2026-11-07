@@ -1778,5 +1778,45 @@
   "cfb:401864533": {
     "pick_team": "New Mexico Lobos",
     "last_notified_ts": 1794020621.3023155
+  },
+  "cfb:401856743": {
+    "pick_team": "Texas Longhorns",
+    "last_notified_ts": 1794082800.5442452
+  },
+  "cfb:401856849": {
+    "pick_team": "Utah Utes",
+    "last_notified_ts": 1794082800.5442452
+  },
+  "cfb:401856853": {
+    "pick_team": "Baylor Bears",
+    "last_notified_ts": 1794082800.5442452
+  },
+  "cfb:401858285": {
+    "pick_team": "Clemson Tigers",
+    "last_notified_ts": 1794082800.5442452
+  },
+  "cfb:401858289": {
+    "pick_team": "Florida State Seminoles",
+    "last_notified_ts": 1794082800.5442452
+  },
+  "cfb:401858286": {
+    "pick_team": "Duke Blue Devils",
+    "last_notified_ts": 1794082800.5442452
+  },
+  "cfb:401858515": {
+    "pick_team": "Maryland Terrapins",
+    "last_notified_ts": 1794082800.5442452
+  },
+  "cfb:401856854": {
+    "pick_team": "Oklahoma State Cowboys",
+    "last_notified_ts": 1794082800.5442452
+  },
+  "cfb:401869945": {
+    "pick_team": "Old Dominion Monarchs",
+    "last_notified_ts": 1794082800.5442452
+  },
+  "cfb:401871073": {
+    "pick_team": "Delaware Blue Hens",
+    "last_notified_ts": 1794082800.5442452
   }
 }
