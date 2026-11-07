@@ -1762,5 +1762,21 @@
   "cfb:401869964": {
     "pick_team": "James Madison Dukes",
     "last_notified_ts": 1793936478.7646768
+  },
+  "cfb:401858288": {
+    "pick_team": "SMU Mustangs",
+    "last_notified_ts": 1794020621.3023155
+  },
+  "cfb:401862818": {
+    "pick_team": "East Carolina Pirates",
+    "last_notified_ts": 1794020621.3023155
+  },
+  "cfb:401858510": {
+    "pick_team": "Nebraska Cornhuskers",
+    "last_notified_ts": 1794020621.3023155
+  },
+  "cfb:401864533": {
+    "pick_team": "New Mexico Lobos",
+    "last_notified_ts": 1794020621.3023155
   }
 }
