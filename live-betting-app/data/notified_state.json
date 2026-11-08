@@ -1882,5 +1882,53 @@
   "cfb:401860911": {
     "pick_team": "Boise State Broncos",
     "last_notified_ts": 1794095085.1331184
+  },
+  "cfb:401871075": {
+    "pick_team": "Jacksonville State Gamecocks",
+    "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401856741": {
+    "pick_team": "Georgia Bulldogs",
+    "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401856852": {
+    "pick_team": "Arizona State Sun Devils",
+    "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401858287": {
+    "pick_team": "Louisville Cardinals",
+    "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401858291": {
+    "pick_team": "Notre Dame Fighting Irish",
+    "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401858511": {
+    "pick_team": "Michigan State Spartans",
+    "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401858513": {
+    "pick_team": "Iowa Hawkeyes",
+    "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401862823": {
+    "pick_team": "Air Force Falcons",
+    "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401856739": {
+    "pick_team": "Oklahoma Sooners",
+    "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401870795": {
+    "pick_team": "Liberty Flames",
+    "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401860913": {
+    "pick_team": "Fresno State Bulldogs",
+    "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401864532": {
+    "pick_team": "Hawai'i Rainbow Warriors",
+    "last_notified_ts": 1794105933.330879
   }
 }
