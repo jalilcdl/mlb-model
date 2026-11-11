@@ -1930,5 +1930,17 @@
   "cfb:401864532": {
     "pick_team": "Hawai'i Rainbow Warriors",
     "last_notified_ts": 1794105933.330879
+  },
+  "cfb:401866458": {
+    "pick_team": "Western Michigan Broncos",
+    "last_notified_ts": 1794360406.971149
+  },
+  "cfb:401866459": {
+    "pick_team": "Kent State Golden Flashes",
+    "last_notified_ts": 1794360406.971149
+  },
+  "cfb:401866460": {
+    "pick_team": "Ohio Bobcats",
+    "last_notified_ts": 1794360406.971149
   }
 }
