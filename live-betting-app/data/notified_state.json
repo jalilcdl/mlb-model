@@ -1942,5 +1942,13 @@
   "cfb:401866460": {
     "pick_team": "Ohio Bobcats",
     "last_notified_ts": 1794360406.971149
+  },
+  "cfb:401866461": {
+    "pick_team": "Buffalo Bulls",
+    "last_notified_ts": 1794454529.7320268
+  },
+  "cfb:401866463": {
+    "pick_team": "Toledo Rockets",
+    "last_notified_ts": 1794454529.7320268
   }
 }
