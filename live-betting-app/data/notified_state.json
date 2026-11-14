@@ -1998,5 +1998,61 @@
   "cfb:401870769": {
     "pick_team": "Kennesaw State Owls",
     "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401856861": {
+    "pick_team": "Kansas Jayhawks",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401856883": {
+    "pick_team": "Georgia Bulldogs",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401858294": {
+    "pick_team": "Notre Dame Fighting Irish",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401858518": {
+    "pick_team": "Indiana Hoosiers",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401858523": {
+    "pick_team": "Oregon Ducks",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401870752": {
+    "pick_team": "Jacksonville State Gamecocks",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401860916": {
+    "pick_team": "Fresno State Bulldogs",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401856886": {
+    "pick_team": "Auburn Tigers",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401862828": {
+    "pick_team": "Tulane Green Wave",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401871099": {
+    "pick_team": "Louisiana Tech Bulldogs",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401856857": {
+    "pick_team": "Arizona State Sun Devils",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401858521": {
+    "pick_team": "Washington Huskies",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401860914": {
+    "pick_team": "Oregon State Beavers",
+    "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401869928": {
+    "pick_team": "App State Mountaineers",
+    "last_notified_ts": 1794699761.799483
   }
 }
