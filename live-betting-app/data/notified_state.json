@@ -1950,5 +1950,53 @@
   "cfb:401866463": {
     "pick_team": "Toledo Rockets",
     "last_notified_ts": 1794454529.7320268
+  },
+  "cfb:401856859": {
+    "pick_team": "Iowa State Cyclones",
+    "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401858296": {
+    "pick_team": "Duke Blue Devils",
+    "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401858300": {
+    "pick_team": "NC State Wolfpack",
+    "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401858301": {
+    "pick_team": "Wake Forest Demon Deacons",
+    "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401858520": {
+    "pick_team": "Wisconsin Badgers",
+    "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401861967": {
+    "pick_team": "UConn Huskies",
+    "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401858297": {
+    "pick_team": "Georgia Tech Yellow Jackets",
+    "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401858525": {
+    "pick_team": "Nebraska Cornhuskers",
+    "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401856889": {
+    "pick_team": "Alabama Crimson Tide",
+    "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401862829": {
+    "pick_team": "UAB Blazers",
+    "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401869937": {
+    "pick_team": "Arkansas State Red Wolves",
+    "last_notified_ts": 1794686054.9786806
+  },
+  "cfb:401870769": {
+    "pick_team": "Kennesaw State Owls",
+    "last_notified_ts": 1794686054.9786806
   }
 }
