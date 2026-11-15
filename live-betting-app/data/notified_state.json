@@ -2054,5 +2054,61 @@
   "cfb:401869928": {
     "pick_team": "App State Mountaineers",
     "last_notified_ts": 1794699761.799483
+  },
+  "cfb:401856858": {
+    "pick_team": "BYU Cougars",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401858298": {
+    "pick_team": "Louisville Cardinals",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401858524": {
+    "pick_team": "Penn State Nittany Lions",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401864538": {
+    "pick_team": "Air Force Falcons",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401871100": {
+    "pick_team": "South Alabama Jaguars",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401862826": {
+    "pick_team": "Tulsa Golden Hurricane",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401856885": {
+    "pick_team": "LSU Tigers",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401858299": {
+    "pick_team": "Stanford Cardinal",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401858519": {
+    "pick_team": "Iowa Hawkeyes",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401864539": {
+    "pick_team": "New Mexico Lobos",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401856882": {
+    "pick_team": "Arkansas Razorbacks",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401862827": {
+    "pick_team": "UTSA Roadrunners",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401856863": {
+    "pick_team": "Texas Tech Red Raiders",
+    "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401860915": {
+    "pick_team": "Utah State Aggies",
+    "last_notified_ts": 1794712121.309476
   }
 }
