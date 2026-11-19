@@ -2110,5 +2110,13 @@
   "cfb:401860915": {
     "pick_team": "Utah State Aggies",
     "last_notified_ts": 1794712121.309476
+  },
+  "cfb:401866467": {
+    "pick_team": "Massachusetts Minutemen",
+    "last_notified_ts": 1795049866.7418084
+  },
+  "cfb:401866469": {
+    "pick_team": "Central Michigan Chippewas",
+    "last_notified_ts": 1795049866.7418084
   }
 }
