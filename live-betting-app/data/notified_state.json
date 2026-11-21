@@ -2118,5 +2118,21 @@
   "cfb:401866469": {
     "pick_team": "Central Michigan Chippewas",
     "last_notified_ts": 1795049866.7418084
+  },
+  "cfb:401866468": {
+    "pick_team": "Toledo Rockets",
+    "last_notified_ts": 1795230094.6673775
+  },
+  "cfb:401858529": {
+    "pick_team": "Oregon Ducks",
+    "last_notified_ts": 1795230094.6673775
+  },
+  "cfb:401864545": {
+    "pick_team": "Air Force Falcons",
+    "last_notified_ts": 1795230094.6673775
+  },
+  "cfb:401864542": {
+    "pick_team": "New Mexico Lobos",
+    "last_notified_ts": 1795230094.6673775
   }
 }
