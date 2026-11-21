@@ -2134,5 +2134,41 @@
   "cfb:401864542": {
     "pick_team": "New Mexico Lobos",
     "last_notified_ts": 1795230094.6673775
+  },
+  "cfb:401856748": {
+    "pick_team": "Vanderbilt Commodores",
+    "last_notified_ts": 1795283657.5265956
+  },
+  "cfb:401856749": {
+    "pick_team": "Ole Miss Rebels",
+    "last_notified_ts": 1795283657.5265956
+  },
+  "cfb:401856867": {
+    "pick_team": "Cincinnati Bearcats",
+    "last_notified_ts": 1795283657.5265956
+  },
+  "cfb:401858309": {
+    "pick_team": "Boston College Eagles",
+    "last_notified_ts": 1795283657.5265956
+  },
+  "cfb:401858310": {
+    "pick_team": "Wake Forest Demon Deacons",
+    "last_notified_ts": 1795283657.5265956
+  },
+  "cfb:401858531": {
+    "pick_team": "Ohio State Buckeyes",
+    "last_notified_ts": 1795283657.5265956
+  },
+  "cfb:401858533": {
+    "pick_team": "Wisconsin Badgers",
+    "last_notified_ts": 1795283657.5265956
+  },
+  "cfb:401862831": {
+    "pick_team": "East Carolina Pirates",
+    "last_notified_ts": 1795283657.5265956
+  },
+  "cfb:401862835": {
+    "pick_team": "North Texas Mean Green",
+    "last_notified_ts": 1795283657.5265956
   }
 }
