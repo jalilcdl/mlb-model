@@ -2170,5 +2170,69 @@
   "cfb:401862835": {
     "pick_team": "North Texas Mean Green",
     "last_notified_ts": 1795283657.5265956
+  },
+  "cfb:401858527": {
+    "pick_team": "Iowa Hawkeyes",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401869946": {
+    "pick_team": "Louisiana Ragin' Cajuns",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401871077": {
+    "pick_team": "Delaware Blue Hens",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401871078": {
+    "pick_team": "Kennesaw State Owls",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401856747": {
+    "pick_team": "Auburn Tigers",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401856754": {
+    "pick_team": "Tennessee Volunteers",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401856755": {
+    "pick_team": "Texas Longhorns",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401858304": {
+    "pick_team": "NC State Wolfpack",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401858528": {
+    "pick_team": "UCLA Bruins",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401858532": {
+    "pick_team": "Penn State Nittany Lions",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401858535": {
+    "pick_team": "Indiana Hoosiers",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401856752": {
+    "pick_team": "Oklahoma Sooners",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401864543": {
+    "pick_team": "North Dakota State Bison",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401869953": {
+    "pick_team": "Georgia Southern Eagles",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401869958": {
+    "pick_team": "Georgia State Panthers",
+    "last_notified_ts": 1795301588.4488316
+  },
+  "cfb:401871101": {
+    "pick_team": "South Alabama Jaguars",
+    "last_notified_ts": 1795301588.4488316
   }
 }
