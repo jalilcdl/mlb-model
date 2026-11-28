@@ -2282,5 +2282,33 @@
   "cfb:401858544": {
     "pick_team": "Wisconsin Badgers",
     "last_notified_ts": 1795829409.4371233
+  },
+  "cfb:401856761": {
+    "pick_team": "Kentucky Wildcats",
+    "last_notified_ts": 1795887769.8510249
+  },
+  "cfb:401858311": {
+    "pick_team": "Boston College Eagles",
+    "last_notified_ts": 1795887769.8510249
+  },
+  "cfb:401858313": {
+    "pick_team": "North Carolina Tar Heels",
+    "last_notified_ts": 1795887769.8510249
+  },
+  "cfb:401858314": {
+    "pick_team": "Notre Dame Fighting Irish",
+    "last_notified_ts": 1795887769.8510249
+  },
+  "cfb:401858540": {
+    "pick_team": "Ohio State Buckeyes",
+    "last_notified_ts": 1795887769.8510249
+  },
+  "cfb:401862842": {
+    "pick_team": "Navy Midshipmen",
+    "last_notified_ts": 1795887769.8510249
+  },
+  "cfb:401866474": {
+    "pick_team": "Ball State Cardinals",
+    "last_notified_ts": 1795887769.8510249
   }
 }
