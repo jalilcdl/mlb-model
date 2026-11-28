@@ -2278,5 +2278,9 @@
   "cfb:401856872": {
     "pick_team": "Utah Utes",
     "last_notified_ts": 1795315780.282693
+  },
+  "cfb:401858544": {
+    "pick_team": "Wisconsin Badgers",
+    "last_notified_ts": 1795829409.4371233
   }
 }
